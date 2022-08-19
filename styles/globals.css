@@ -1,9 +1,22 @@
+@font-face {
+  font-family: 'PicNic';
+  src: url('../asset/fonts/webfonts/PicNic-Regular.woff');
+  /* src: url('../asset/OpenSans/OpenSans-Medium.ttf'); */
+  font-weight: 400;
+  font-style: normal;
+  }
+
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background: #00002C;
+    background: #0000ff;  
+    background: radial-gradient(circle at center , #6b70ff 0,#4134ff 20%,#3535ff, #0000ff 100%);   
+    /* background: radial-gradient(circle at center , #53535396 0,#271d7c76 20%,#00002c, #050567 100%); */
+    /* background: radial-gradient(circle at center , #ffffff96 0,#8b83ff76 20%,#4444ff, #0000ff 100%); */
+    /* background: radial-gradient(circle at center , #ffffff96 0,#12129176 40%,#00002c, #00002C 100%); */
 }
 
 a {
@@ -20,7 +33,7 @@ a {
     color-scheme: dark;
   }
   body {
-    color: white;
-    background: black;
+    /* color: white; */
+    /* background: black; */
   }
 }
