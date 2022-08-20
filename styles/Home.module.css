@@ -410,6 +410,9 @@ transform: translate(-100%, 50%) translate(100%, -50%);
   padding-top: 50vh;
   margin-right: 30vh;
   /* height: 50vh; */
+  color: white;
+  z-index: 1000;
+  mix-blend-mode: difference;
 }
 
 
@@ -425,4 +428,8 @@ transform: translate(-100%, 50%) translate(100%, -50%);
   width: 100vw;
   overflow:hidden;
   transform-origin: center;
+  /* color: white; */
+  z-index: 1000;
+  mix-blend-mode: difference;
+
 }
