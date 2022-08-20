@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/about.module.css'
+import styles from '../styles/About.module.css'
 import * as React from 'react';
 
 
