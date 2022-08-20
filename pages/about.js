@@ -413,7 +413,7 @@ export default function Home() {
                 <div className={styles.paragraph}> 
                 <span className={styles.subheader}>A convergence of practices</span>
                 <b>“From ancient times through the present, it has been the weavers and astrologer-poets of the communities and villages who have revealed to us this alternative and subversive thread of knowledges and practices capable of restoring the world and setting it on its rightful course.” 
-                // boat building-ship-building-weaving-herbariums…
+                -- boat building-ship-building-weaving-herbariums…
                 </b>
                 </div>
 
