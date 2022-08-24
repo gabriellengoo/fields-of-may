@@ -1,4 +1,14 @@
 
+/* hide scrollbar but allow scrolling */
+div {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll; 
+}
+
+div::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
 
 :root {
   --s-5: 5px;
@@ -21,8 +31,9 @@
   --ex-small-font: clamp(.75rem,10vw,1rem);
   --small-font: 14pt;
   --med-font: 24pt;
-  --xe-large-font: 20.425vw;
-  --line-height: 13.425vw;
+  --large-font: 18.425vw;
+  --xl-large-font: 20.425vw;
+  --line-height: 10.425vw;
   
 }
 
