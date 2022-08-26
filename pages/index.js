@@ -2,9 +2,41 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import * as React from 'react';
+import { color } from '@mui/system';
 
 
 export default function Home() {
+
+    let url = 'https://value-parser.herokuapp.com/';
+    
+    // create state variable to store the value
+    const [valueState, setValueState] = React.useState(styles.goodVision);
+    const [dateState, setDateState] = React.useState('//DATEFETCHED//');
+
+    // fetch value from url and set the value to the state
+    React.useEffect(() => {
+        fetch(url)
+        .then(res => res.text())
+        .then(data => {
+            let arr = data.split(' ');
+            setDateState(arr[0]);
+          
+            let value = parseFloat(arr[2]);
+            if(value > 0 && value <= 2) {
+                setValueState(styles.goodVision);
+            } else if(value > 2.0 && value <= 2.5) {
+                setValueState(styles.fairVision);
+            } else if(value > 2.6 && value <= 5.8) {                
+                setValueState(styles.poorVision);
+            } else if(value > 5.9) {
+                setValueState(styles.veryPoorVision);
+            }
+          
+        })
+    }
+    , []);
+
+
 
 
     return (
@@ -135,8 +167,8 @@ export default function Home() {
                             <div id="tooltip"
                                 className={
                                     styles.livetext
-                            }>
-                                Fields of May
+                            } >
+                                <span className={valueState}>Fields of May</span>
                             </div>
 
 
@@ -163,7 +195,7 @@ export default function Home() {
                                 className={
                                     styles.link
                             }>Baltic Sea Algae</a>
-                            as of //DATEFETCHED//</p>
+                            as of {dateState}</p>
 
 
                         <div className={

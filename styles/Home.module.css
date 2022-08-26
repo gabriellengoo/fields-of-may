@@ -267,6 +267,9 @@
 .poorVision{
   filter: blur(2.5px);
 }
+.verypoorVision{
+  filter: blur(3.0px);
+}
 /* only blur on hover */
 /* .goodVision:hover{
   filter: blur(.5px);
