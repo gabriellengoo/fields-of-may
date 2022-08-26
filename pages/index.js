@@ -12,6 +12,7 @@ export default function Home() {
     // create state variable to store the value
     const [valueState, setValueState] = React.useState(styles.goodVision);
     const [dateState, setDateState] = React.useState('//DATEFETCHED//');
+    const [faviconState, setFaviconState] = React.useState('/favicon.ico');
 
     // fetch value from url and set the value to the state
     React.useEffect(() => {
@@ -24,12 +25,16 @@ export default function Home() {
             let value = parseFloat(arr[2]);
             if(value > 0 && value <= 2) {
                 setValueState(styles.goodVision);
+                setFaviconState('/Excellent.ico');
             } else if(value > 2.0 && value <= 2.5) {
                 setValueState(styles.fairVision);
+                setFaviconState('/fair.ico');
             } else if(value > 2.6 && value <= 5.8) {                
                 setValueState(styles.poorVision);
+                setFaviconState('/good.ico');
             } else if(value > 5.9) {
                 setValueState(styles.veryPoorVision);
+                setFaviconState('/poor.ico');
             }
           
         })
@@ -46,7 +51,7 @@ export default function Home() {
             <Head>
                 <title>Fields of May</title>
                 <meta name="description" content="Fields of May"/>
-                <link rel="icon" href="/favicon.ico"/>
+                <link rel="icon" href={faviconState}/>
                 <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js" defer></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
