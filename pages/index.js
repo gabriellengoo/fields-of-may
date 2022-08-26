@@ -28,13 +28,13 @@ export default function Home() {
                 setFaviconState('/Excellent.ico');
             } else if(value > 2.0 && value <= 2.5) {
                 setValueState(styles.fairVision);
-                setFaviconState('/fair.ico');
+                setFaviconState('/Fair.ico');
             } else if(value > 2.6 && value <= 5.8) {                
                 setValueState(styles.poorVision);
-                setFaviconState('/good.ico');
+                setFaviconState('/Good.ico');
             } else if(value > 5.9) {
                 setValueState(styles.veryPoorVision);
-                setFaviconState('/poor.ico');
+                setFaviconState('/Poor.ico');
             }
           
         })
