@@ -67,6 +67,32 @@ body {
     font-style:normal;
     }
 
+    @font-face {
+      font-family: 'Hermes-Bold';
+      src: url('../public/assets/fonts/webfonts/Hermes-Bold.otf');
+      /* src: url('../asset/OpenSans/OpenSans-Medium.ttf'); */
+      font-weight: 100;
+      font-style:normal;
+      }
+
+      @font-face {
+        font-family: 'Helvetica Neue';
+        src: url("../public/assets/fonts/webfonts/HelveticaNeue.ttf") ;
+        /* font-weight: 300; */
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Helveticalight';
+        src: url("../public/assets/fonts/webfonts/HelveticaNeueLight.ttf") ;
+        /* font-weight: 300; */
+        font-style: normal;
+        font-display: swap;
+      }
+
+
+
 
 
 

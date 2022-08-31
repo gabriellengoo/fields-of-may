@@ -6,6 +6,53 @@ import * as React from 'react';
 
 export default function Home() {
 
+    let url = 'https://value-parser.herokuapp.com/';
+    
+    // create state variable to store the value
+    const [valueState, setValueState] = React.useState(styles.goodVision);
+    const [dateState, setDateState] = React.useState('//DATEFETCHED//');
+    const [faviconState, setFaviconState] = React.useState('/favicon.ico');
+
+    // fetch value from url and set the value to the state
+    React.useEffect(() => {
+        fetch(url)
+        .then(res => res.text())
+        .then(data => {
+            let arr = data.split(' ');
+            setDateState(arr[0]);
+          
+            let value = parseFloat(arr[2]);
+            if(value > 0 && value <= 2) {
+                setValueState(styles.ExcellentVision);
+                setFaviconState('/Excellent.ico');
+            } else if(value > 2.0 && value <= 2.5) {
+                setValueState(styles.goodVision);
+                setFaviconState('/Good.ico');
+            } else if(value > 2.6 && value <= 5.8) {                
+                setValueState(styles.fairVision);
+                setFaviconState('/Fair.ico');
+            } 
+            else if(value > 5.9) {
+                setValueState(styles.poorVision);
+                setFaviconState('/Poor.ico');
+            }
+          
+        })
+    }
+
+    
+    , []);
+
+    const MyComponentDraggable = () => {
+        useEffect( () => 
+          new Draggable({
+            "dialogId" : "MyComponentId",
+            "elementThatCaptureTheClick" : "MyComponentId"
+          })
+        )
+        // return <MyComponent/>
+      }
+
 
     return (
         <div className={
@@ -14,7 +61,7 @@ export default function Home() {
             <Head>
                 <title>Fields of May</title>
                 <meta name="description" content="Fields of May"/>
-                <link rel="icon" href="/favicon.ico"/>
+                <link rel="icon" href={faviconState}/>
                 <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js" defer></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
@@ -25,7 +72,7 @@ export default function Home() {
 
 
 
- {/*---------------------------- Faded background ----------- */}
+ {/*---------------------------- Faded background ignore this ----------- */}
  <div className={styles.fadeMe}>
 <header className={
                     styles.header
@@ -302,11 +349,29 @@ export default function Home() {
                 </div>
                 <div className={styles.contentSubTitle}>
                     <div>
-                        <a href="./witness-Seminar">[ Next ]</a>
+                        {/* <a href="./witness-Seminar">[ Next ]</a> */}
                         <a href="./"> Back </a>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section className={styles.content}>
+        <div className={styles.contentSection}>
+            <div className={styles.contentHeader}>
+                {/* <div className={styles.contentTitle}> */}
+                    <div>
+                        <a href="./about">ON RHYTHM</a>
+                    </div>
+                </div>
+                <div className={styles.contentSubTitle}>
+                    <div>
+                        {/* <a href="./witness-Seminar">[ Next ]</a> */}
+                        <a href="./"> MATERIAL SPECIFICITY </a>
+                    </div>
+                </div>
+            {/* </div> */}
         </div>
     </section>
 
