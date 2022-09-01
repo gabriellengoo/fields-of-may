@@ -60,6 +60,7 @@ export default function Home() {
                 <meta name="description" content="Fields of May"/>
                 <link rel="icon"
                     href={faviconState}/>
+                     <link rel="apple-touch-icon" href={faviconState} />
                 <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js" defer></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js" defer></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
