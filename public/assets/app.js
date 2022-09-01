@@ -6,7 +6,6 @@ console.log("hi im runnng");
 
 
 
-
   // ----------------------------------- follow ----------------------------------------------------
 
   $(document).mousemove(function(e){
@@ -15,6 +14,7 @@ console.log("hi im runnng");
 $( document ).on( "mousemove", function( event ) {
   $( "#log" ).text( "pageX: " + event.pageX - ", pageY: " + event.pageY );
   $( "#tooltip" ).css({ "left" : event.pageX - 50, "top" : event.pageY - 50});
+  $( "#tooltip2" ).css({ "left" : event.pageX - 50, "top" : event.pageY - 50});
   $( "#image" ).css({ "left" : event.pageX - 50, "top" : event.pageY - 50});
 });
 

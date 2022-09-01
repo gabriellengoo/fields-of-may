@@ -34,7 +34,6 @@ div::-webkit-scrollbar {
   --large-font: 18.425vw;
   --xl-large-font: 20.425vw;
   --line-height: 10.425vw;
-  
 }
 
 
@@ -102,7 +101,8 @@ body {
   line-height: 1.2;
   padding: 0;
   margin: 0;
-  color: #0000ff;
+  color: #000dff;
+  /* #3636f8 #000dff; */
   overflow-y: hidden;
   overflow-x: hidden;
   /* cursor: url(../public/assets/images/cursor.cur) -50 -50, auto!important; */
@@ -116,7 +116,7 @@ body {
     -o-animation: fadein 2s; /* Opera */
     /* background: #0000ff;   */
     /* background: linear-gradient(to bottom, rgba(0,0,255,0.65) 0%, rgba(0,0,255,0) 100%);    background: radial-gradient(circle at center , #6b70ff 0,#4134ff 20%,#3535ff, #0000ff 100%);    */
-    /* background: radial-gradient(circle at center , #53535396 0,#271d7c76 20%,#00002c, #050567 100%); */
+    background: radial-gradient(circle at center , #53535396 0,#271d7c76 20%,#00002c, #050567 100%);
     /* background: radial-gradient(circle at center , #ffffff96 0,#8b83ff76 20%,#4444ff, #0000ff 100%); */
     /* background: radial-gradient(circle at center , #ffffff96 0,#0000ff76 40%,#12129176, #00002C 100%); */
 }
@@ -203,5 +203,17 @@ section{
 
 
 
-
-
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode: multiply;
+  opacity: .5;
+  z-index: -1;
+  /* z-index: 20; */
+  margin: 0;
+            padding: 0;
+            position: fixed;
+            touch-action: none;
+  pointer-events: none;
+}
