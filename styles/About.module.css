@@ -120,9 +120,8 @@ top: 0;
 
 
 .contentSection {
-    padding: 0em 0.75em .9em;
+    padding: 2em 0.75em .9em;
     /* position: fixed; */
-
 }
 .contentSection2 {
   padding: 0em 0.75em 0em;
@@ -190,7 +189,7 @@ top: 0;
     width: 100vw;
     background-color: transparent;
     z-index: 200;
-    top: calc(5vw + 1px);
+    top: calc(7vw + 1px);
     padding: 3vw 3vw 3vw 3vw;
     overflow: auto;
     line-height: 1.35vw;
