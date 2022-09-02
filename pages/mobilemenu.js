@@ -16,7 +16,7 @@ import {
 
 export default function Home() {
 
-    const [isOpen, setOpen] = useState(false)
+    const [isOpen, setOpen] = useState(true)
 
     let url = 'https://value-parser.herokuapp.com/';
 
@@ -152,7 +152,7 @@ export default function Home() {
 
 
 
-                            <div className={
+                            {/* <div className={
                                 styles.nppostmobile
                             }>
                                 <div className={
@@ -160,7 +160,26 @@ export default function Home() {
                                 }>
                                     <span className={valueStatemobile}>Fields of May</span>
                                 </div>
-                            </div>
+                            </div> */}
+
+<div className={
+                        styles.subMenumobile
+                    }>
+                        <a href="./commingsoon" className={
+                            styles.linkTopmobile
+                        }>Witness Seminars
+                        </a>
+
+
+                        <a className={
+                                styles.linkTopmobile
+                            }
+                            href="./commingsoon">Past Witness Seminars</a>
+                        <a className={
+                                styles.linkTopmobile
+                            }
+                            href="./commingsoon">About</a>
+                    </div>
                            
                             {/* <div 
                                 className={
@@ -381,7 +400,8 @@ export default function Home() {
                                 <div className={
                                     styles.livetext
                                 }>
-                                    <span className={valueState}>Fields of May</span>
+                                    <span className={valueState}>Fields      May</span>
+                                    
                                 </div>
                             </div>
                             {/* <div id="image" id="tooltip"

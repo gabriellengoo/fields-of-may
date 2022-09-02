@@ -80,7 +80,7 @@ export default function Home() {
 
 
 
-            <MobileView></MobileView>
+          
             <main className={
                 styles.main
             }>
@@ -116,14 +116,20 @@ export default function Home() {
 
                     {/*---------------------------- live text ----------- */}
 
-
+                    <BrowserView>
                     <div className={
                     styles.livetext
                 }>
                    Comming Soon
                     </div>
-
-
+                    </BrowserView>
+                    <MobileView>
+                    <div className={
+                    styles.soonmobile
+                }>
+                   Comming Soon
+                    </div>
+                </MobileView>
   
     
                     </section>
