@@ -188,7 +188,8 @@ export default function Home() {
 
                         <p className={
                             styles.subTextOpacity
-                        }>The concentration of Baltic Sea Algae as of {dateState} is {valueStatee}. For several decades the Archipelago Research Institute has been measuring the shrinking Herring and traced the cause to the morphing plankton due to changes in salinity and eutrophication. In short, Algae concentration is an indicator of the Baltic Sea's health here reflected in the legibility of the font.
+                        }>The concentration of Baltic Sea Algae as of {dateState} is {valueStatee}. For several decades the Archipelago Research
+                         Institute has been measuring the shrinking Herring and traced the cause to the morphing plankton due to changes in salinity and eutrophication. In short, Algae concentration is an indicator of the Baltic Sea&apos;s health here reflected in the legibility of the font.
                         </p>
 
 
