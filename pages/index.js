@@ -4,7 +4,13 @@ import styles from '../styles/Home.module.css'
 import * as React from 'react';
 import {useEffect} from 'react'
 import { useState } from "react";
-
+import {
+    BrowserView,
+    MobileView,
+    isBrowser,
+    isMobile,
+  } from "react-device-detect";
+  import { browserName, CustomView } from "react-device-detect";
 
 export default function Home() {
 
@@ -58,9 +64,8 @@ export default function Home() {
             <Head>
                 <title>Fields of May</title>
                 <meta name="description" content="Fields of May"/>
-                <link rel="icon"
-                    href={faviconState}/>
-                     <link rel="apple-touch-icon" href={faviconState} />
+                <link rel="icon" href={faviconState}/>
+                <link rel="apple-touch-icon" href={faviconState} />
                 <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js" defer></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js" defer></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
@@ -73,6 +78,9 @@ export default function Home() {
             </Head>
 
 
+
+
+            <MobileView></MobileView>
             <main className={
                 styles.main
             }>
@@ -161,7 +169,7 @@ export default function Home() {
                     <div className={
                         styles.subMenu
                     }>
-                        <a href="./witness-seminar" className={
+                        <a href="./commingsoon" className={
                             styles.linkTop
                         }>Witness Seminars
                         </a>
@@ -170,11 +178,11 @@ export default function Home() {
                         <a className={
                                 styles.linkTop
                             }
-                            href="./past-witness-seminars">Past Witness Seminars</a>
+                            href="./commingsoon">Past Witness Seminars</a>
                         <a className={
                                 styles.linkTop
                             }
-                            href="./about">About</a>
+                            href="./commingsoon">About</a>
                     </div>
 
 
@@ -218,9 +226,20 @@ export default function Home() {
                             <div 
                                 className={
                                     styles.nppostname
+                            }>Text legabilaty
+                            (through blur) 
+                            representing the Amount of
+                            <a href=" https://goo.gl/maps/sLnY9MYMYfbBCA5y8"
+                                className={
+                                    styles.link
                             }>
-                                <p>The concentration of Baltic Sea Algae as of 25.08.2022 is
-                                    <b> {valueStatee}</b>
+                                Baltic Sea Algae
+                            </a>
+
+
+
+
+                                <p><b> </b>
                                 </p>
                             </div> 
 
@@ -242,16 +261,7 @@ export default function Home() {
 
                         <p className={
                             styles.subTextOpacity
-                        }>Text legabilaty
-                            (through blur) 
-                            representing the Amount of
-                            <a href="https://www.google.com/maps/place/Baltic+Sea/@57.2610777,19.7297928,6z/data=!3m1!4b1!4m5!3m4!1s0x46f4d7d988201b2b:0xb43097ae8474cb3!8m2!3d58.487952!4d19.863281"
-                                className={
-                                    styles.link
-                            }>
-                                Baltic Sea Algae
-                            </a>
-                            
+                        }>The concentration of Baltic Sea Algae as of {dateState} is {valueStatee}. For several decades the Archipelago Research Institute has been measuring the shrinking Herring and traced the cause to the morphing plankton due to changes in salinity and eutrophication. In short, Algae concentration is an indicator of the Baltic Sea's health here reflected in the legibility of the font.
                         </p>
 
 
@@ -377,7 +387,7 @@ export default function Home() {
 
 
 {/* ----------------------------  wave -----------  */}
-            <div className={styles.overlay} id="overlay"></div>
+            {/* <div className={styles.overlay} id="overlay"></div>
         <div className={styles.ui} id="ui">
         <div className={styles.camera} id="camera">
             <canvas className={styles.profile} id="profile" width="350" height="105"></canvas>
@@ -396,7 +406,7 @@ export default function Home() {
                 <div className={styles.choppinesslabel} id="choppiness-label"></div>
             </div>
         </div>
-        <canvas className={styles.simulator} id="simulator"></canvas>
+        <canvas className={styles.simulator} id="simulator"></canvas> */}
 
 
 

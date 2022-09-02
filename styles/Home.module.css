@@ -202,7 +202,7 @@
 .subTextOpacity{
   position: relative;
   text-align: center;
-  word-spacing: 1.5rem;
+  word-spacing: .5rem;
   font-size: var( --ex-small-font);
   margin: var(--s-10) auto;
   justify-content:  center;
@@ -550,6 +550,8 @@ z-index: 10000;
 }
 
 .overlay {
+  width: 100vw;
+  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;

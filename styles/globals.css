@@ -209,6 +209,7 @@ canvas {
   left: 0;
   mix-blend-mode: multiply;
   opacity: .5;
+  z-index: -1;
   /* z-index: 20; */
   margin: 0;
             padding: 0;
