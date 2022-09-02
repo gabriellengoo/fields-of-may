@@ -15,7 +15,7 @@
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
+  /* padding: 4rem 0; */
   /* background: radial-gradient(circle at center , #53535396 0,#271d7c76 20%,#00002c, #050567 100%); */
   flex: 1;
   display: flex;
@@ -842,12 +842,13 @@ z-index: 100 !important;
   color: #fff;
   font-family: 'Helveticalight';
   mix-blend-mode: difference;
+  z-index: 10000;
 }
 
 .question{
-  font-size: 1.5rem;
-  padding: 1rem 1rem;
-  padding-top: 6px;
+  font-size: 2.5rem;
+  /* padding: 1rem 1rem; */
+  /* padding-top: 6.5px; */
 }
 
 
@@ -864,5 +865,9 @@ z-index: 100 !important;
     align-items: center;
     text-transform: none;
 }
+
+
+
+
 
 
