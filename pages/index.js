@@ -12,7 +12,7 @@ import {
   } from "react-device-detect";
   import { browserName, CustomView } from "react-device-detect";
   import Hamburger from 'hamburger-react'
-
+ 
 
 export default function Home() {
 
