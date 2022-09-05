@@ -740,8 +740,8 @@ export default function Home() {
         <div className={styles.loader}>
           <Image
             src="/assets/images/loader.gif"
-            width={70}
-            height={70}
+            width={30}
+            height={30}
             alt="Loader GIF - Loading fallback"
           />
         </div>
