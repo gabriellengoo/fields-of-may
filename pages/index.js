@@ -7,7 +7,7 @@ import { useState } from "react";
 import {
     BrowserView,
     MobileView,
-    isBrowser,
+    isBrowser, 
     isMobile,
   } from "react-device-detect";
   import { browserName, CustomView } from "react-device-detect";
@@ -23,6 +23,7 @@ export default function Home() {
     // create state variable to store the value
     const [valueState, setValueState] = React.useState(styles.goodVision);
     const [valueStatemobile, setValueStatemobile] = React.useState(styles.goodVisionmobile);
+    const [valueStatemobilehome, setValueStatemobilehome] = React.useState(styles.goodVisionmobilehome);
     const [valueStatee, setValueStatee] = React.useState('XXUg/L');
     const [dateState, setDateState] = React.useState('00.00.0000');
     const [faviconState, setFaviconState] = React.useState('/favicon.ico');
@@ -67,6 +68,20 @@ export default function Home() {
                 setFaviconState('/Fair.ico');
             } else if (value > 5.9) {
                 setValueStatemobile(styles.poorVisionmobile);
+                setFaviconState('/Poor.ico');
+            }
+
+            if (value > 0 && value <= 2) {
+                setValueStatemobilehome(styles.ExcellentVisionmobilehome);
+                setFaviconState('/Excellent.ico');
+            } else if (value > 2.0 && value <= 2.5) {
+                setValueStatemobilehome(styles.goodVisionmobilehome);
+                setFaviconState('/Good.ico');
+            } else if (value > 2.6 && value <= 5.8) {
+                setValueStatemobilehome(styles.fairVisionmobilehome);
+                setFaviconState('/Fair.ico');
+            } else if (value > 5.9) {
+                setValueStatemobilehome(styles.poorVisionmobilehome);
                 setFaviconState('/Poor.ico');
             }
 
@@ -124,14 +139,41 @@ export default function Home() {
                 <div className={
                     styles.nav
                 }>
-                    <div>  
+        
+        <div>  <a href="./mobileinfo">Fields of May</a> </div> 
+    
+                <div>  
                     <a href="./mobilemenu">        
                         <Hamburger size={25} toggled={isOpen} toggle={setOpen} /></a>   
 </div>
-                <div className={
-                    styles.question
-                } >  <a href="./mobileinfo">Info</a> </div> 
                 </div>
+
+
+<div className={
+                        styles.subTextmobile
+                    }>
+
+
+                        {/* <p className={
+                            styles.subTextOpacity
+                        }>The concentration of Baltic Sea Algae as of {dateState} is {valueStatee}. For several decades the Archipelago Research
+                         Institute has been measuring the shrinking Herring and traced the cause to the morphing plankton due to changes in salinity and eutrophication. In short, Algae concentration is an indicator of the Baltic Sea&apos;s health here reflected in the legibility of the font.
+                        </p> */}
+
+                        {/* <div className={
+                    styles.question
+                } >  <a href="./mobileinfo">About</a> </div> 
+                    <div className={
+                    styles.question
+                } >  <a href="./mobileinfo">Past Witness Seminars</a> </div> 
+                       <div className={
+                    styles.question
+                } >  <a href="./mobileinfo">Witness Seminars</a> </div>  */}
+
+
+           
+                    </div>
+
 
                 {/*---------------------------- centered text ----------- */}
                 <section className={
@@ -158,10 +200,110 @@ export default function Home() {
                                 <div className={
                                     styles.livetextmobile
                                 }>
-                                    <span className={valueStatemobile}>Fields of May</span>
+                                    <span className={valueStatemobilehome}>Fields of May</span>
                                 </div>
                             </div>
                            
+
+
+
+
+  
+    
+
+
+
+                    {/*---------------------------- Sub text ----------- */}
+                    <div className={
+                        styles.subTextmobile
+                    }>
+
+
+                        <p className={
+                            styles.subTextOpacitymobile
+                        }>The concentration of Baltic Sea Algae as of {dateState} is {valueStatee}. For several decades the Archipelago Research
+                         Institute has been measuring the shrinking Herring and traced the cause to the morphing plankton due to changes in salinity and eutrophication. In short, Algae concentration is an indicator of the Baltic Sea&apos;s health here reflected in the legibility of the font.
+                        </p>
+
+
+            <div className={
+                            styles.centermobile
+                        }>
+                        <div className={
+                            styles.algaeListContainermobile
+                        }>
+                            <p className={
+                                styles.algaeListTitlemobile
+                            }>Algae Concentration</p>
+
+                            <div className={
+                                styles.algaeListWrappermobile
+                            }>
+
+                                <div className={
+                                    styles.algaeList
+                                }>
+                                    <li className={
+                                        styles.excellentVisiontext
+                                    }>Excellent</li>
+                                    <li className={
+                                        styles.goodVisiontext
+                                    }>Good</li>
+                                    <li className={
+                                        styles.fairVisiontext
+                                    }>Fair</li>
+                                    <li className={
+                                        styles.poorVisiontext
+                                    }>Poor</li>
+                                </div>
+                            </div>
+
+                            <div className={
+                                styles.algaeListWrappermobile
+                            }>
+                                <div className={
+                                    styles.algaeList
+                                }>
+                                    <li className={
+                                        styles.excellentVisiontext
+                                    }>0–2.0</li>
+                                    <li className={
+                                        styles.goodVisiontext
+                                    }>2.1–2.5</li>
+                                    <li className={
+                                        styles.fairVisiontext
+                                    }>2.6–5.8</li>
+                                    <li className={
+                                        styles.poorVisiontext
+                                    }>5.9+</li>
+                                </div>
+                            </div>
+
+
+                            <div className={
+                                styles.algaeListWrappermobile
+                            }>
+                                <div className={
+                                    styles.algaeList
+                                }>
+                                    <li className={
+                                        styles.excellentVisiontext
+                                    }>UG/L</li>
+                                    <li className={
+                                        styles.goodVisiontext
+                                    }>UG/L</li>
+                                    <li className={
+                                        styles.fairVisiontext
+                                    }>UG/L</li>
+                                    <li className={
+                                        styles.poorVisiontext
+                                    }>UG/L</li>
+                                </div>
+                            </div>
+            </div>
+
+</div> 
+                    </div>
                             {/* <div 
                                 className={
                                     styles.nppostnamemobile

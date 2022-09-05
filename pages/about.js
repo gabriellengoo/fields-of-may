@@ -96,6 +96,15 @@ export default function Home() {
                     styles.gradientTop
                 }></section>
 
+{/* <div className={ styles.linkTopmobilewrapper}>
+                            <a href="./"
+                                className={
+                                    styles.linkTopmobile
+                            }
+                            >
+                                Back
+                            </a>
+                            </div> */}
 
 <section>
     <div className={styles.popupmobile}>
@@ -105,13 +114,17 @@ export default function Home() {
 
 <div className={styles.mobilenav}>
 <div className={styles.contentTitlemobile}>
-                    <div>
+                    <div className={
+                            styles.titleMobile
+                        }>
                         <a href="./about">About</a>
                     </div>
                 </div>
 
 
 </div>
+
+
 
       
        <div className={styles.FixedHeightContainermobile}>

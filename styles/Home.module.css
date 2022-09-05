@@ -210,10 +210,41 @@
   width: 80vw;
   z-index: 100 !important;
   /* border-radius: 5vw; */
-  border-bottom: 1px solid rgb(21, 0, 255);
+  /* border-bottom: 1px solid rgb(21, 0, 255); */
   padding: calc(.5vw + 1px);
+  text-transform: uppercase;
+    align-items: center;
+    font-size: .9rem;
+    color: white;
+    text-transform: none;
 }
 
+.subTextOpacitymobile{
+  position: relative;
+  /* text-align: center; */
+  word-spacing: .5rem;
+  font-size: var( --ex-small-font);
+  margin: var(--s-10) auto;
+  justify-content:  center;
+  width: 100vw;
+  z-index: 100 !important;
+  /* border-radius: 5vw; */
+  /* border-bottom: 1px solid rgb(21, 0, 255); */
+  padding: calc(.5vw + 1px);
+  text-transform: uppercase;
+    align-items: center;
+    font-size: .9rem;
+    color: white;
+    text-transform: none;
+}
+/* 
+    text-transform: uppercase;
+    align-items: center;
+    font-size: .9rem;
+    color: white;
+    text-transform: none; */
+
+    
 
 
 .algaeListContainer {
@@ -262,6 +293,8 @@
   padding: 0 auto;
   
 }
+
+
 
 
 
@@ -694,8 +727,13 @@ z-index: 10000;
 /* --------mobile*/
 
 .containermobile{
-  /* background: #0000ff;  */
-  padding: 0rem;
+  z-index: -1000;
+   /* background: linear-gradient(to bottom, rgba(0,0,255,0.65) 0%, rgba(0,0,255,0) 100%);    
+   background: radial-gradient(circle at center , #6b70ff 0,#4134ff 20%,#3535ff, #0000ff 100%);    */
+   /* background: radial-gradient(circle at center , #53535396 0,#271d7c76 20%,#00002c, #050567 100%); */
+   /* background: radial-gradient(circle at center , #ffffff96 0,#8b83ff76 20%,#4444ff, #0000ff 100%); */
+   background: radial-gradient(circle at center , #ffffffab 0,#6a6afc76 50%,#000070 60%, #12129176 70%, #00002C 100%);
+   padding: 0rem;
 }
 
 .soonmobile{
@@ -720,12 +758,13 @@ z-index: 10000;
   z-index: 1000;
 }
 
-.subTextmobile{
+
+/* ver one  */
+/* .subTextmobile{
   justify-content:  center;
   font-size: var( --xx-small-font);
   text-transform: none;
   width: 100vw;
-  /* padding: var(--s-20); */
   position: fixed;
     left: 50%;
     top: 51%;
@@ -733,22 +772,80 @@ z-index: 10000;
   padding-top: 0;
   margin-top: 0;
   z-index: 100 !important;
+} */
+
+
+/* ver two  */
+.subTextmobile{
+  justify-content: center;
+  text-transform: uppercase;
+  /* width: 40vw; */
+  /* position: fixed;
+  left: 50%;
+  top: 51%;
+  transform: translate(-50%, -50%); */
+  padding-top: 0;
+  margin-top: 0;
+  z-index: 100 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  /* font-weight: bold; */
+  color: white;
+  mix-blend-mode: difference;
+  text-transform: none;
+  position: fixed;
+    /* left: 50%; */
+    bottom: 0vh;
+ 
 }
 
+.subTextmobilenav{
+  justify-content: center;
+  text-transform: uppercase;
+  /* width: 40vw; */
+  position: fixed;
+  left: 50%;
+  top: 51%;
+  transform: translate(-50%, -50%);
+  padding-top: 0;
+  margin-top: 0;
+  z-index: 100 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  /* color: white; */
+  border-bottom: 3px solid #0505c8;
+  color: #0505c8; 
+}
+
+.question{
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+}
 
 .centermobile{
   position: relative;
   left:10%;
   /* top: 51%; */
   /* transform: translate(-50%, -50%); */
-padding-top: 0;
+/* padding-top: 0;
 margin-top: 0;
-z-index: 100 !important;
+z-index: 100 !important; */
 }
 
 .algaeListContainermobile{
   justify-content:  center;
   /* text-align: center; */
+  text-transform: uppercase;
+    align-items: center;
+    font-size: .9rem;
+    color: white;
+    text-transform: none;
 }
 
 .nppostmobile{
@@ -783,9 +880,11 @@ z-index: 100 !important;
   top: 51%;
   transform: translate(-50%, -50%);
   position: absolute;
+  pointer-events: none;
+  line-height: 15rem;
 }
 .goodVisionmobile{
-  filter: blur(8px);
+  filter: blur(4px);
   /* color:#658A2e; */
   font-size: 10rem;
   text-align: center;
@@ -797,11 +896,46 @@ z-index: 100 !important;
   top: 51%;
   transform: translate(-50%, -50%);
   position: absolute;
-  
+  pointer-events: none;
+  line-height: 15rem;
 }
 .fairVisionmobile{
-  filter: blur(13px);
+  filter: blur(8px);
   opacity: .7;
+  font-size: 10rem;
+  text-align: center;
+  font-family: 'PicNic';
+  justify-content: center;
+  width: 100vw;
+  left: 50%;
+  top: 51%;
+  line-height: 15rem;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  pointer-events: none;
+}
+.poorVisionmobile{
+  filter: blur(15px);
+  /* color:#658A2A9b; */
+  font-size: 10rem;
+  text-align: center;
+  font-family: 'PicNic';
+  justify-content: center;
+  width: 100vw;
+  left: 50%;
+  line-height: 15rem;
+  top: 51%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  pointer-events: none;
+}
+
+
+
+/* ------------ text home -------------*/
+.ExcellentVisionmobilehome{
+  filter: blur(0px);
+  opacity: 1;
   font-size: 10rem;
   text-align: center;
   font-family: 'PicNic';
@@ -811,10 +945,41 @@ z-index: 100 !important;
   top: 51%;
   transform: translate(-50%, -50%);
   position: absolute;
+  pointer-events: none;
+}
+.goodVisionmobilehome{
+  filter: blur(4px);
+  /* color:#658A2e; */
+  font-size: 10rem;
+  text-align: center;
+  font-family: 'PicNic';
+  justify-content: center;
+  /* line-height: .2rem; */
+  width: 100vw;
+  left: 50%;
+  top: 51%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  pointer-events: none;
   
 }
-.poorVisionmobile{
-  filter: blur(18px);
+.fairVisionmobilehome{
+  filter: blur(8px);
+  opacity: .7;
+  font-size: 10rem;
+  text-align: center;
+  font-family: 'PicNic';
+  justify-content: center;
+  width: 100vw;
+  left: 50%;
+  top: 51%;
+  line-height: 8rem;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  pointer-events: none;
+}
+.poorVisionmobilehome{
+  filter: blur(15px);
   /* color:#658A2A9b; */
   font-size: 10rem;
   text-align: center;
@@ -825,8 +990,8 @@ z-index: 100 !important;
   top: 51%;
   transform: translate(-50%, -50%);
   position: absolute;
+  pointer-events: none;
 }
-
 
 
 
@@ -843,13 +1008,9 @@ z-index: 100 !important;
   font-family: 'Helveticalight';
   mix-blend-mode: difference;
   z-index: 10000;
+  align-items: center;
 }
 
-.question{
-  font-size: 2.5rem;
-  /* padding: 1rem 1rem; */
-  /* padding-top: 6.5px; */
-}
 
 
 .linkTopmobile{

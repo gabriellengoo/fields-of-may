@@ -2,7 +2,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Witness.module.css'
 import * as React from 'react';
-
+import {
+    BrowserView,
+    MobileView,
+    isBrowser,
+    isMobile,
+  } from "react-device-detect";
+  import { browserName, CustomView } from "react-device-detect";
+  import Hamburger from 'hamburger-react'
 
 export default function Home() {
 
@@ -59,9 +66,115 @@ export default function Home() {
             </Head>
 
 
-            {/*---------------------------- Faded background ignore this ----------- */}
 
 
+         {/* ----------------------------------------------------------------Mobile */}
+        <MobileView>
+        <main className={
+                styles.main
+            }>
+
+
+                <section className={
+                    styles.centeredElements
+                }>
+
+
+                    <div id="tooltip"
+                        className={
+                            styles.cursorimg
+                    }>
+                        <Image src="/assets/images/Fish.png" alt="Herring Fish" width="100px" height="25px"/>
+                    </div>
+
+
+                    {/* <div className={
+                        styles.subMenu
+                    }>
+                        <a href="./witness-seminar"
+                            className={
+                                styles.linkTop
+                        }>Witness Seminars
+                        </a>
+
+
+                        <a className={
+                                styles.linkTopActive
+                            }
+                            href="./past-witness-seminars">Past Witness Seminars</a>
+                        <a className={
+                                styles.linkTop
+                            }
+                            href="./about">About</a>
+                    </div> */}
+
+
+                    <div className={
+                        styles.content
+                    }>
+
+<div className={ styles.linkTopmobilewrapper}>
+                            <a href="./"
+                                className={
+                                    styles.linkTopmobile
+                            }
+                            >
+                                Back
+                            </a>
+                            </div>
+
+                        <div className={
+                            styles.contentwrappermobile
+                        }>
+
+                      
+                            <p className={
+                            styles.titleMobile
+                        }>PLACEHOLDER TEXT Witness Seminars</p>
+                            <Image src="/assets/images/Placeholder.jpeg" alt="Herring Fish" width="800px" height="400px"/>
+                            <div className={
+                                styles.contentparagraphmobile
+                            }>
+                                <p>
+                                    If we imagine that each participant is
+                                                                                                     invited to speak on behalf of a layer of the stratified seabed. 
+                                                                                                     The archived layers are distributed accross phosphate, carbon, fish,
+                                                                                                      and salt, and aim to bring into dicussion possible attunement 
+                                                                                                      through a grounding in Seili. What post-extractive 
+                                                                                                      futures can we imagine through this specific formation? 
+                                                                                                      (with specific attention to imagining a 
+                                                                                                      legal system rooted in a more-than-human ecological paradigm).</p>
+
+                                <p>
+                                    If we imagine that each participant is
+                                                                                                     invited to speak on behalf of a layer of the stratified seabed. 
+                                                                                                     The archived layers are distributed accross phosphate, carbon, fish,
+                                                                                                      and salt, and aim to bring into dicussion possible attunement 
+                                                                                                      through a grounding in Seili. What post-extractive 
+                                                                                                      futures can we imagine through this specific formation? 
+                                                                                                      (with specific attention to imagining a 
+                                                                                                      legal system rooted in a more-than-human ecological paradigm).
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+
+                {/*---------------------------- horizontal gradient ----------- */}
+                <section className={
+                    styles.gradientTop
+                }></section>
+            </main>
+
+         </MobileView>
+
+
+
+         {/* ----------------------------------------------------------------Browser  */}
+
+        <BrowserView>
             <main className={
                 styles.main
             }>
@@ -119,7 +232,9 @@ export default function Home() {
                             </a>
 
 
-                            <p>PLACEHOLDER TEXT Witness Seminars</p>
+                            <p className={
+                            styles.title
+                        }>PLACEHOLDER TEXT Witness Seminars</p>
                             <Image src="/assets/images/Placeholder.jpeg" alt="Herring Fish" width="800px" height="400px"/>
                             <div className={
                                 styles.contentparagraph
@@ -156,7 +271,7 @@ export default function Home() {
                     styles.gradientTop
                 }></section>
             </main>
-
+            </BrowserView>
 
         </div>
 

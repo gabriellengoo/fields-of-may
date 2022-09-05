@@ -16,6 +16,15 @@ top: 0;
 
 }
 
+.titleMobile{
+  padding:0vh !important;
+  font-family: 'PicNic' !important;
+  font-size: 4rem;
+  /* line-height: 2rem; */
+}
+
+
+
 
 .navigation {
     /* position: fixed; */
@@ -856,4 +865,39 @@ position: relative;
     width: 100%;
     background-color: blue;
     padding: 1.8vw 1vw 2vw 2vw;
+  }
+
+
+  .footermobile{
+    font-size: .6rem;
+  }
+
+
+  .linkTopmobilewrapper{
+    width: 100%;
+    position: fixed;        
+    padding: 10px 0;
+    top: 40vh;
+  }
+  
+  .linkTopmobile{
+    text-decoration: none;
+    transition: opacity 0.35s;
+    border-radius: 5vw;
+    border: 1px solid #edff85d4;
+    padding: calc(9.5vw + 1px);
+    border-radius: 50%;
+    width: 98px;
+    height: 100px;
+    left: calc(-10vw + 1px);
+    justify-content: center;
+    background-color: rgb(4 4 61 / 55%);
+    /* filter: blur(20px); */
+    z-index: 100;
+    color: #edff85d4;
+    justify-content: center;
+    mix-blend-mode: none;
+    /* align-items: center; */
+    /* text-transform: none; */
+    position: fixed;
   }

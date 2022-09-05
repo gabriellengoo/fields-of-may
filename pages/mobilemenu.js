@@ -98,9 +98,9 @@ export default function Home() {
 
 
             <MobileView>
-            {/* <div className={
+            <div className={
             styles.containermobile
-        }> */}
+        }>
             <main className={
                 styles.mainmobile
             }>
@@ -124,14 +124,41 @@ export default function Home() {
                 <div className={
                     styles.nav
                 }>
-                    <div>  
+        
+        <div >  <a href="./mobileinfo">Fields of May</a> </div> 
+    
+                <div>  
                     <a href="./">        
                         <Hamburger size={25} toggled={isOpen} toggle={setOpen} /></a>   
 </div>
+                </div>
+
+
+<div className={
+                        styles.subTextmobilenav
+                    }>
+
+
+                        {/* <p className={
+                            styles.subTextOpacity
+                        }>The concentration of Baltic Sea Algae as of {dateState} is {valueStatee}. For several decades the Archipelago Research
+                         Institute has been measuring the shrinking Herring and traced the cause to the morphing plankton due to changes in salinity and eutrophication. In short, Algae concentration is an indicator of the Baltic Sea&apos;s health here reflected in the legibility of the font.
+                        </p> */}
+
+                        <div className={
+                    styles.question
+                } >  <a href="./about">About</a> </div> 
+                       <div className={
+                    styles.question
+                } >  <a href="./witness-seminar">Witness Seminars</a> </div> 
                 <div className={
                     styles.question
-                } >  <a href="./mobileinfo">Info</a> </div> 
-                </div>
+                } >  <a href="./past-witness-seminars">Past Witness Seminars</a> </div> 
+
+
+           
+                    </div>
+
 
                 {/*---------------------------- centered text ----------- */}
                 <section className={
@@ -151,26 +178,36 @@ export default function Home() {
                         }>
 
 
-<div className={
-                        styles.subMenumobile
-                    }>
-                        <a href="./commingsoon" className={
-                            styles.linkTopmobile
-                        }>Witness Seminars
-                        </a>
 
-
-                        <a className={
-                                styles.linkTopmobile
-                            }
-                            href="./commingsoon">Past Witness Seminars</a>
-                        <a className={
-                                styles.linkTopmobile
-                            }
-                            href="./commingsoon">About</a>
-                    </div>
+                            <div className={
+                                styles.nppostmobile
+                            }>
+                                <div className={
+                                    styles.livetextmobile
+                                }>
+                                    <span className={valueStatemobile}>Fields of May</span>
+                                </div>
+                            </div>
                            
-                         
+                            {/* <div 
+                                className={
+                                    styles.nppostnamemobile
+                            }>Text legabilaty
+                            (through blur) 
+                            representing the Amount of
+                            <a href=" https://goo.gl/maps/sLnY9MYMYfbBCA5y8"
+                                className={
+                                    styles.link
+                            }>
+                                Baltic Sea Algae
+                            </a>
+
+
+
+
+                                <p><b> </b>
+                                </p>
+                            </div>  */}
 
 
                         </div>
@@ -188,6 +225,89 @@ export default function Home() {
                     }>
 
 
+                        {/* <p className={
+                            styles.subTextOpacity
+                        }>The concentration of Baltic Sea Algae as of {dateState} is {valueStatee}. For several decades the Archipelago Research Institute has been measuring the shrinking Herring and traced the cause to the morphing plankton due to changes in salinity and eutrophication. In short, Algae concentration is an indicator of the Baltic Sea's health here reflected in the legibility of the font.
+                        </p> */}
+
+
+            <div className={
+                            styles.centermobile
+                        }>
+                        <div className={
+                            styles.algaeListContainermobile
+                        }>
+                            {/* <p className={
+                                styles.algaeListTitlemobile
+                            }>Algae Concentration</p> */}
+
+                            {/* <div className={
+                                styles.algaeListWrappermobile
+                            }> */}
+
+                                {/* <div className={
+                                    styles.algaeList
+                                }>
+                                    <li className={
+                                        styles.excellentVisiontext
+                                    }>Excellent</li>
+                                    <li className={
+                                        styles.goodVisiontext
+                                    }>Good</li>
+                                    <li className={
+                                        styles.fairVisiontext
+                                    }>Fair</li>
+                                    <li className={
+                                        styles.poorVisiontext
+                                    }>Poor</li>
+                                </div>
+                            </div> */}
+
+                            {/* <div className={
+                                styles.algaeListWrappermobile
+                            }>
+                                <div className={
+                                    styles.algaeList
+                                }>
+                                    <li className={
+                                        styles.excellentVisiontext
+                                    }>0–2.0</li>
+                                    <li className={
+                                        styles.goodVisiontext
+                                    }>2.1–2.5</li>
+                                    <li className={
+                                        styles.fairVisiontext
+                                    }>2.6–5.8</li>
+                                    <li className={
+                                        styles.poorVisiontext
+                                    }>5.9+</li>
+                                </div>
+                            </div> */}
+
+
+                            {/* <div className={
+                                styles.algaeListWrappermobile
+                            }>
+                                <div className={
+                                    styles.algaeList
+                                }>
+                                    <li className={
+                                        styles.excellentVisiontext
+                                    }>UG/L</li>
+                                    <li className={
+                                        styles.goodVisiontext
+                                    }>UG/L</li>
+                                    <li className={
+                                        styles.fairVisiontext
+                                    }>UG/L</li>
+                                    <li className={
+                                        styles.poorVisiontext
+                                    }>UG/L</li>
+                                </div>
+                            </div> */}
+            </div>
+
+</div> 
                     </div>
                 </section>
 
@@ -198,8 +318,10 @@ export default function Home() {
 
 
             </main>
-            {/* </div> */}
+            </div>
             </MobileView>
+
+
 
 
 
