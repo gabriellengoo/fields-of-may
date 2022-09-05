@@ -15,7 +15,7 @@ export default function Home() {
     useEffect(() => {
       setTimeout(() => {
         setisLoaded(true); 
-      }, 1000);
+      }, 10000);
     }, []);
 
     const [isOpen, setOpen] = useState(true)
@@ -473,8 +473,8 @@ export default function Home() {
         <div className={styles.loader}>
           <Image
             src="/assets/images/loader.gif"
-            width={270}
-            height={180}
+            width={70}
+            height={70}
             alt="Loader GIF - Loading fallback"
           />
         </div>
