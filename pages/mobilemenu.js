@@ -15,7 +15,7 @@ export default function Home() {
     useEffect(() => {
       setTimeout(() => {
         setisLoaded(true); 
-      }, 13000);
+      }, 1000);
     }, []);
 
     const [isOpen, setOpen] = useState(true)
