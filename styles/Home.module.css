@@ -210,12 +210,12 @@
   width: 80vw;
   z-index: 100 !important;
   /* border-radius: 5vw; */
-  /* border-bottom: 1px solid rgb(21, 0, 255); */
+  border-bottom: 1px solid rgb(21, 0, 255);
   padding: calc(.5vw + 1px);
   text-transform: uppercase;
     align-items: center;
     font-size: .9rem;
-    color: white;
+    /* color: white; */
     text-transform: none;
 }
 
