@@ -16,6 +16,13 @@ import {
 
 export default function Home() {
 
+    const [isLoaded, setisLoaded] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setisLoaded(true); 
+    }, 10000);
+  }, []);
+
     const [isOpen, setOpen] = useState(false)
 
     let url = 'https://value-parser.herokuapp.com/';
@@ -108,6 +115,10 @@ export default function Home() {
                 <script src="assets/ui.js" defer></script>
                 <script src="assets/waves.js" defer></script>
             </Head>
+            
+            {isLoaded ? (
+        <>
+      <noscript>You need to enable JavaScript to run this site.</noscript>
 
 
 
@@ -724,6 +735,17 @@ export default function Home() {
 
 </div>
 </BrowserView>
+</>
+      ) : (
+        <div className={styles.loader}>
+          <Image
+            src="/assets/images/loader.gif"
+            width={270}
+            height={180}
+            alt="Loader GIF - Loading fallback"
+          />
+        </div>
+      )}
           </div>
     )
 }

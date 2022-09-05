@@ -880,6 +880,7 @@
 overflow-y: auto !important;
 z-index: -1;
 padding: 1vh;
+padding-bottom: 10vw;
 background-color: #625fb93c;
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);

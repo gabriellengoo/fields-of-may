@@ -796,6 +796,7 @@ z-index: 10000;
   mix-blend-mode: difference;
   text-transform: none;
   position: fixed;
+  padding-bottom:2vh; 
     /* left: 50%; */
     bottom: 0vh;
  
@@ -862,6 +863,7 @@ z-index: 100 !important; */
 
 .mainmobile{
   height: 100vh;
+  /* background: radial-gradient(circle at center , #ffffffab 0,#6a6afc76 50%,#000070 60%, #12129176 70%, #00002C 100%); */
   /* background: radial-gradient(circle at center , #53535396 0,#271d7c76 20%,#00002c, #050567 100%) */
 }
 
@@ -902,16 +904,17 @@ z-index: 100 !important; */
 .fairVisionmobile{
   filter: blur(8px);
   opacity: .7;
-  font-size: 10rem;
+  font-size: 30vw;
   text-align: center;
   font-family: 'PicNic';
   justify-content: center;
-  width: 100vw;
+  width: 90vw;
   left: 50%;
   top: 51%;
   line-height: 15rem;
   transform: translate(-50%, -50%);
   position: absolute;
+  z-index: 0;
   pointer-events: none;
 }
 .poorVisionmobile{
@@ -936,7 +939,7 @@ z-index: 100 !important; */
 .ExcellentVisionmobilehome{
   filter: blur(0px);
   opacity: 1;
-  font-size: 10rem;
+  font-size: 30vw;
   text-align: center;
   font-family: 'PicNic';
   justify-content: center;
@@ -950,7 +953,7 @@ z-index: 100 !important; */
 .goodVisionmobilehome{
   filter: blur(4px);
   /* color:#658A2e; */
-  font-size: 10rem;
+  font-size: 30vw;
   text-align: center;
   font-family: 'PicNic';
   justify-content: center;
@@ -966,11 +969,11 @@ z-index: 100 !important; */
 .fairVisionmobilehome{
   filter: blur(8px);
   opacity: .7;
-  font-size: 10rem;
+  font-size: 30vw;
   text-align: center;
   font-family: 'PicNic';
   justify-content: center;
-  width: 100vw;
+  max-width: 90vw;
   left: 50%;
   top: 51%;
   line-height: 8rem;
@@ -981,7 +984,7 @@ z-index: 100 !important; */
 .poorVisionmobilehome{
   filter: blur(15px);
   /* color:#658A2A9b; */
-  font-size: 10rem;
+  font-size: 30vw;
   text-align: center;
   font-family: 'PicNic';
   justify-content: center;
@@ -1030,5 +1033,9 @@ z-index: 100 !important; */
 
 
 
-
-
+.loader{
+  position: fixed;
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+}

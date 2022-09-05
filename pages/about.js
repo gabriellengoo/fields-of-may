@@ -71,7 +71,7 @@ export default function Home() {
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
                 <script src="assets/app.js" defer></script>
             </Head>
-
+  
 
 
 
@@ -486,7 +486,7 @@ export default function Home() {
               </main>
               </div>
               </BrowserView>
-
+ 
 
         
              </div>

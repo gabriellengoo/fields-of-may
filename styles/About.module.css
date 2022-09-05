@@ -830,7 +830,8 @@ position: relative;
     padding: 1.8vw 1vw 2vw 2vw;
     height: calc(calc(100vh - 3vw) - 1px);
     top: 10vw;
-    
+    padding-bottom: 11vh;
+    padding-top: 3vh;
   }
 
   .FixedHeightContainermobile{
