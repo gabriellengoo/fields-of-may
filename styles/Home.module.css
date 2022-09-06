@@ -736,6 +736,19 @@ z-index: 10000;
    padding: 0rem;
 }
 
+.containermobilemenu{
+  z-index: -1000;
+  background-image: url(../public/assets/images/backgroundmobile.png);
+  /* background-repeat: no-repeat; */
+  background-size: contain;
+   /* background: linear-gradient(to bottom, rgba(0,0,255,0.65) 0%, rgba(0,0,255,0) 100%);    
+   background: radial-gradient(circle at center , #6b70ff 0,#4134ff 20%,#3535ff, #0000ff 100%);    */
+   /* background: radial-gradient(circle at center , #53535396 0,#271d7c76 20%,#00002c, #050567 100%); */
+   /* background: radial-gradient(circle at center , #ffffff96 0,#8b83ff76 20%,#4444ff, #0000ff 100%); */
+   /* background: radial-gradient(circle at center , #ffffffab 0,#6a6afc76 50%,#000070 60%, #12129176 70%, #00002C 100%); */
+   padding: 0rem;
+}
+
 .soonmobile{
   text-align: center;
   font-family: 'Bowlby One SC', cursive;

@@ -19,7 +19,7 @@ top: 0;
 .titleMobile{
   padding:0vh !important;
   font-family: 'PicNic' !important;
-  font-size: 4rem;
+  /* font-size: 4rem; */
   /* line-height: 2rem; */
 }
 
@@ -827,7 +827,7 @@ position: relative;
     overflow-y: auto !important;
     z-index: 100;
     font-size: 4.6vw;
-    padding: 1.8vw 1vw 2vw 2vw;
+    /* padding: 1.8vw 1vw 2vw 2vw; */
     height: calc(calc(100vh - 3vw) - 1px);
     top: 10vw;
     padding-bottom: 11vh;
@@ -837,9 +837,10 @@ position: relative;
   .FixedHeightContainermobile{
     width: 97vw;
     padding-bottom: 0vw;
-    top: 14vw;
+    top: 20vw;
     position: relative;
     float: left;
+    padding: 1.8vw 1vw 2vw 2vw;
   }
 
 
@@ -857,8 +858,14 @@ position: relative;
     margin-top: -0.6vw;
     margin-left: 0;
     position: fixed;
-    top: 2vw;
+    top: 0vw;
     letter-spacing: -0.06vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100vw;
+    backdrop-filter: blur(4px);
+    background: #2020643b;
   }
 
 
@@ -901,4 +908,9 @@ position: relative;
     /* align-items: center; */
     /* text-transform: none; */
     position: fixed;
+  }
+
+
+  .hamburgernav{
+    height: 100;
   }

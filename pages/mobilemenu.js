@@ -15,7 +15,7 @@ export default function Home() {
     useEffect(() => {
       setTimeout(() => {
         setisLoaded(true); 
-      }, 10000);
+      }, 10);
     }, []);
 
     const [isOpen, setOpen] = useState(true)
@@ -97,15 +97,15 @@ export default function Home() {
                 <script src="assets/waves.js" defer></script>
             </Head>
           
-            {isLoaded ? (
-        <>
+            {/* {isLoaded ? (
+        <> */}
       <noscript>You need to enable JavaScript to run this site.</noscript>
 
 
 
             <MobileView>
                 <div className={
-                    styles.containermobile
+                    styles.containermobilemenu
                 }>
                     <main className={
                 styles.mainmobile
@@ -121,7 +121,7 @@ export default function Home() {
 
 
                     {/*---------------------------- hamburger ----------- */}
-                    <div className={
+                    {/* <div className={
                         styles.nav
                     }>
 
@@ -135,7 +135,7 @@ export default function Home() {
                                     toggled={isOpen}
                                     toggle={setOpen}/></a>
                         </div>
-                    </div>
+                    </div> */}
 
 
                     <div className={
@@ -186,11 +186,11 @@ export default function Home() {
                             }>
 
 
-                                <div>
+                                {/* <div>
                                     <div>
                                         <span className={valueStatemobile}>Fields of May</span>
                                     </div>
-                                </div>
+                                </div> */}
 
                                 </div>
                         </div>
@@ -293,7 +293,7 @@ export default function Home() {
                             </div> */}
 
 
-                                    <div className={
+                                    {/* <div className={
                                         styles.nppost
                                     }>
                                         <div className={
@@ -302,7 +302,7 @@ export default function Home() {
                                             <span className={valueState}>Fields      May</span>
 
                                         </div>
-                                    </div>
+                                    </div> */}
                                     {/* <div id="image" id="tooltip"
                                 className={
                                     styles.nppostname
@@ -468,7 +468,7 @@ export default function Home() {
                 </div>
             </BrowserView>
 
-            </>
+            {/* </>
       ) : (
         <div className={styles.loader}>
           <Image
@@ -478,7 +478,7 @@ export default function Home() {
             alt="Loader GIF - Loading fallback"
           />
         </div>
-      )}
+      )} */}
 
         </div>
     )

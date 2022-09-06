@@ -10,10 +10,14 @@ import {
     isMobile,
   } from "react-device-detect";
   import { browserName, CustomView } from "react-device-detect";
+  import Hamburger from 'hamburger-react'
+  import { useState } from "react";
+
 
 export default function Home() {
     let url = 'https://value-parser.herokuapp.com/';
     
+    const [isOpen, setOpen] = useState(false)
     // create state variable to store the value
     const [valueState, setValueState] = React.useState(styles.goodVision);
     const [dateState, setDateState] = React.useState('//DATEFETCHED//');
@@ -119,6 +123,10 @@ export default function Home() {
                         }>
                         <a href="./about">About</a>
                     </div>
+                    <div>  
+                    <a className={styles.hamburgernav} href="./mobilemenu">        
+                        <Hamburger size={50} toggled={isOpen} toggle={setOpen} /></a>   
+</div>
                 </div>
 
 
