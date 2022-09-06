@@ -20,7 +20,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setisLoaded(true); 
-    }, 5000);
+    }, 2000);
   }, []);
 
     const [isOpen, setOpen] = useState(false)
@@ -452,7 +452,7 @@ export default function Home() {
 
 {/* ----------------------------------------------------------------Browser  */}
 
-
+<div >
             <BrowserView>
 <div className={
             styles.container
@@ -491,7 +491,7 @@ export default function Home() {
                     <div className={
                         styles.subMenu
                     }>
-                        <a href="./commingsoon" className={
+                        <a href="./witness-seminar" className={
                             styles.linkTop
                         }>Witness Seminars
                         </a>
@@ -500,11 +500,11 @@ export default function Home() {
                         <a className={
                                 styles.linkTop
                             }
-                            href="./commingsoon">Past Witness Seminars</a>
+                            href="./past-witness-seminars">Past Witness Seminars</a>
                         <a className={
                                 styles.linkTop
                             }
-                            href="./commingsoon">About</a>
+                            href="./about">About</a>
                     </div>
 
 
@@ -735,6 +735,7 @@ export default function Home() {
 
 </div>
 </BrowserView>
+</div>
 </>
       ) : (
         <div className={styles.loader}>

@@ -117,7 +117,7 @@ export default function Home() {
 
       
        <div className={styles.FixedHeightContainermobile}>
-  <div className={styles.Content}>
+  <div className={styles.Contentmobile}>
 
 
   <div className={styles.nav2}>
@@ -130,7 +130,7 @@ export default function Home() {
 
 
                     <p id="placeholder" className={
-              styles.title
+              styles.subtitlemobile
           }>Placeholder Text</p>
        <div className={
                   styles.contentparagraphmobile
@@ -158,7 +158,7 @@ export default function Home() {
                   
               </div>
               <p id="placeholder2" className={
-              styles.title
+              styles.subtitlemobile
           }>Placeholder Text Two</p>
        <div className={
                   styles.contentparagraphmobile
@@ -209,9 +209,10 @@ export default function Home() {
 
 
 
-
+<div className={
+                styles.container
+            }>
                   {/* ----------------------------------------------------------------Browser  */}
-
         <BrowserView>
             <main className={
                 styles.main
@@ -242,14 +243,17 @@ export default function Home() {
 
 
                         <a className={
-                                styles.linkTopActive
+                                styles.linkTop
                             }
                             href="./past-witness-seminars">Past Witness Seminars</a>
                         <a className={
                                 styles.linkTop
                             }
                             href="./about">About</a>
+
+                            
                     </div>
+
 
 
                     <div className={
@@ -261,14 +265,21 @@ export default function Home() {
                             styles.contentwrapper
                         }>
 
-                            <a href="./"
-                                className={
-                                    styles.linkTop
-                            }>
-                                Back
-                            </a>
 
-                            <p>PLACEHOLDER TEXT Past Seminars</p>
+<div className={
+                            styles.backlink
+                        }>
+                            <div><a href="./"
+                                >
+                                Back
+                            </a></div>
+                            
+                            </div>
+
+
+                            <p className={
+                            styles.titlewitness
+                        }>Past Seminars</p>
                             {/* <Image src="/assets/images/Placeholder.jpeg" alt="Herring Fish" width="800px" height="400px"/> */}
                             <div className={
                                 styles.contentparagraph
@@ -283,6 +294,11 @@ export default function Home() {
                                                                                                       (with specific attention to imagining a 
                                                                                                       legal system rooted in a more-than-human ecological paradigm).</p>
 
+                              
+                            </div>
+                            <div className={
+                                styles.contentparagraph
+                            }>
                                 <p>
                                     If we imagine that each participant is
                                                                                                      invited to speak on behalf of a layer of the stratified seabed. 
@@ -292,11 +308,64 @@ export default function Home() {
                                                                                                       futures can we imagine through this specific formation? 
                                                                                                       (with specific attention to imagining a 
                                                                                                       legal system rooted in a more-than-human ecological paradigm).
-                                </p>
+                                                                                                      If we imagine that each participant is
+                                                                                                     invited to speak on behalf of a layer of the stratified seabed. 
+                                                                                                     The archived layers are distributed accross phosphate, carbon, fish,
+                                                                                                      and salt, and aim to bring into dicussion possible attunement 
+                                                                                                      through a grounding in Seili. What post-extractive 
+                                                                                                      futures can we imagine through this specific formation? 
+                                                                                                      (with specific attention to imagining a 
+                                                                                                      legal system rooted in a more-than-human ecological paradigm).
+                                                                                                      </p>
+                            </div>
+                            <div className={
+                                styles.contentparagraph
+                            }>
+                                <p>
+                                    If we imagine that each participant is
+                                                                                                     invited to speak on behalf of a layer of the stratified seabed. 
+                                                                                                     The archived layers are distributed accross phosphate, carbon, fish,
+                                                                                                      and salt, and aim to bring into dicussion possible attunement 
+                                                                                                      through a grounding in Seili. What post-extractive 
+                                                                                                      futures can we imagine through this specific formation? 
+                                                                                                      (with specific attention to imagining a 
+                                                                                                      legal system rooted in a more-than-human ecological paradigm).
+                                                                                                      If we imagine that each participant is
+                                                                                                     invited to speak on behalf of a layer of the stratified seabed. 
+                                                                                                     The archived layers are distributed accross phosphate, carbon, fish,
+                                                                                                      and salt, and aim to bring into dicussion possible attunement 
+                                                                                                      through a grounding in Seili. What post-extractive 
+                                                                                                      futures can we imagine through this specific formation? 
+                                                                                                      (with specific attention to imagining a 
+                                                                                                      legal system rooted in a more-than-human ecological paradigm).
+                                                                                                      </p>
+                            </div>
+                            <div className={
+                                styles.contentparagraph
+                            }>
+                                <p>
+                                    If we imagine that each participant is
+                                                                                                     invited to speak on behalf of a layer of the stratified seabed. 
+                                                                                                     The archived layers are distributed accross phosphate, carbon, fish,
+                                                                                                      and salt, and aim to bring into dicussion possible attunement 
+                                                                                                      through a grounding in Seili. What post-extractive 
+                                                                                                      futures can we imagine through this specific formation? 
+                                                                                                      (with specific attention to imagining a 
+                                                                                                      legal system rooted in a more-than-human ecological paradigm).
+                                                                                                      If we imagine that each participant is
+                                                                                                     invited to speak on behalf of a layer of the stratified seabed. 
+                                                                                                     The archived layers are distributed accross phosphate, carbon, fish,
+                                                                                                      and salt, and aim to bring into dicussion possible attunement 
+                                                                                                      through a grounding in Seili. What post-extractive 
+                                                                                                      futures can we imagine through this specific formation? 
+                                                                                                      (with specific attention to imagining a 
+                                                                                                      legal system rooted in a more-than-human ecological paradigm).
+                                                                                                      </p>
                             </div>
                         </div>
 
                     </div>
+                    
                 </section>
 
 
@@ -306,7 +375,7 @@ export default function Home() {
                 }></section>
             </main>
             </BrowserView>
-
+            </div>
         </div>
 
 

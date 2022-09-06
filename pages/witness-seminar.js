@@ -250,7 +250,7 @@ export default function Home() {
 
 
                         <a className={
-                                styles.linkTopActive
+                                styles.linkTop
                             }
                             href="./past-witness-seminars">Past Witness Seminars</a>
                         <a className={
@@ -270,18 +270,28 @@ export default function Home() {
                         }>
 
 
-                            <a href="./"
-                                className={
-                                    styles.linkTop
-                            }>
+<div className={
+                            styles.backlink
+                        }>
+                            <div><a href="./"
+                                >
                                 Back
-                            </a>
+                            </a></div>
+                            
+                            </div>
 
 
                             <p className={
-                            styles.title
-                        }>PLACEHOLDER TEXT Witness Seminars</p>
-                            <Image src="/assets/images/Placeholder.jpeg" alt="Herring Fish" width="800px" height="400px"/>
+                            styles.titlewitness
+                        }>Witness Seminars</p>
+
+<div className={
+                            styles.seminarimage
+                        }>
+<Image src="/assets/images/Placeholder.jpeg" alt="Placeholder Image" width="800px" height="400px"/>
+</div>
+
+
                             <div className={
                                 styles.contentparagraph
                             }>
@@ -293,8 +303,12 @@ export default function Home() {
                                                                                                       through a grounding in Seili. What post-extractive 
                                                                                                       futures can we imagine through this specific formation? 
                                                                                                       (with specific attention to imagining a 
-                                                                                                      legal system rooted in a more-than-human ecological paradigm).</p>
-
+                                                                                                      legal system rooted in a more-than-human ecological paradigm).
+                                </p>
+                            </div>
+                            <div className={
+                                styles.contentparagraph
+                            }>
                                 <p>
                                     If we imagine that each participant is
                                                                                                      invited to speak on behalf of a layer of the stratified seabed. 
