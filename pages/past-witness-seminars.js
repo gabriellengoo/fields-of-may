@@ -71,6 +71,16 @@ export default function Home() {
 
          {/* ----------------------------------------------------------------Mobile */}
          <MobileView>
+
+
+
+
+
+
+
+
+
+            
         <main className={
                 styles.main
             }>

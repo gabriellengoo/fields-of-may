@@ -20,7 +20,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setisLoaded(true); 
-    }, 10000);
+    }, 5000);
   }, []);
 
     const [isOpen, setOpen] = useState(false)
@@ -153,7 +153,7 @@ export default function Home() {
         
         <div>  <a href="./mobileinfo">Fields of May</a> </div> 
     
-                <div>  
+                <div>   
                     <a href="./mobilemenu">        
                         <Hamburger size={25} toggled={isOpen} toggle={setOpen} /></a>   
 </div>

@@ -121,7 +121,7 @@ export default function Home() {
 
 
                     {/*---------------------------- hamburger ----------- */}
-                    {/* <div className={
+                    <div className={
                         styles.nav
                     }>
 
@@ -135,7 +135,7 @@ export default function Home() {
                                     toggled={isOpen}
                                     toggle={setOpen}/></a>
                         </div>
-                    </div> */}
+                    </div>
 
 
                     <div className={

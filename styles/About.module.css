@@ -836,11 +836,11 @@ position: relative;
 
   .FixedHeightContainermobile{
     width: 97vw;
-    padding-bottom: 0vw;
     top: 20vw;
     position: relative;
     float: left;
     padding: 1.8vw 1vw 2vw 2vw;
+    padding-bottom: 9vw;
   }
 
 
