@@ -824,19 +824,20 @@ position: relative;
 
 
     .columnmobile {
-    overflow-y: auto !important;
+    /* overflow-y: auto !important; */
     z-index: 100;
     font-size: 4.6vw;
     /* padding: 1.8vw 1vw 2vw 2vw; */
     height: calc(calc(100vh - 3vw) - 1px);
     top: 10vw;
+    width: 97vw;
     padding-bottom: 11vh;
     padding-top: 3vh;
   }
 
   .FixedHeightContainermobile{
     width: 97vw;
-    top: 20vw;
+    top: 8vw;
     position: relative;
     float: left;
     padding: 1.8vw 1vw 2vw 2vw;
@@ -854,13 +855,15 @@ position: relative;
 
 
   .contentTitlemobile{
-    font-size: 10.6vw;
+    /* font-size: 10.6vw; */
+    font-size: 8.6vw;
     margin-top: -0.6vw;
     margin-left: 0;
     position: fixed;
     top: 0vw;
     letter-spacing: -0.06vw;
     display: flex;
+    line-height: 2rem;
     justify-content: space-between;
     flex-direction: row;
     width: 100vw;
@@ -913,4 +916,46 @@ position: relative;
 
   .hamburgernav{
     height: 100;
+  }
+
+
+  .title{
+    font-size: 9vw;
+    text-transform: none;
+    line-height: 0;
+    padding-top: 8vh;
+  }
+
+
+
+  .contentparagraphmobile{
+    width: 100vw;
+    /* padding-top: 10vh; */
+  }
+
+
+  .nav2{
+    padding: 0;
+    position: fixed;
+    font-size: 5.6vw;
+    display: flex;
+    /* line-height: 1rem; */
+    flex-direction: row;
+    width: 96vw;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+  }
+
+
+  .nav2 a{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid #0000ffd4;
+    border-radius: 50%;
+    width: 96vw;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    background: #2020643b;
   }

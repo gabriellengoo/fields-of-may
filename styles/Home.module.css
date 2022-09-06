@@ -221,7 +221,7 @@
 
 .subTextOpacitymobile{
   position: relative;
-  /* text-align: center; */
+  text-align: center;
   word-spacing: .5rem;
   font-size: var( --ex-small-font);
   margin: var(--s-10) auto;
@@ -1020,13 +1020,16 @@ z-index: 100 !important; */
 .nav{
   display: flex;
   justify-content: space-between;
-  padding: 1rem 1rem;
+  padding: 5px;
   color: #fff;
-  font-family: 'Helveticalight';
+  font-size: 2rem;
+  /* font-family: 'Helveticalight'; */
+  font-family: 'PicNic';
   mix-blend-mode: difference;
   z-index: 10000;
   align-items: center;
 }
+
 
 
 

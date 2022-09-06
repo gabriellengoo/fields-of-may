@@ -121,7 +121,7 @@ export default function Home() {
       <noscript>You need to enable JavaScript to run this site.</noscript>
 
 
-
+ 
 
             <MobileView>
             <div className={
@@ -155,7 +155,7 @@ export default function Home() {
     
                 <div>   
                     <a href="./mobilemenu">        
-                        <Hamburger size={25} toggled={isOpen} toggle={setOpen} /></a>   
+                        <Hamburger size={50} toggled={isOpen} toggle={setOpen} /></a>   
 </div>
                 </div>
 
