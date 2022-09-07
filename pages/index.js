@@ -722,7 +722,7 @@ function Box() {
             <div>
                 {/* <h2>Box</h2> */}
                 <div className={styles.box}> 
-                <label for="year">Select Year : </label>
+                <label htmlFor="year">Select Year : </label>
                 
 <select className={styles.boxselect} name="year" id="year">
   <option value="19XW">19XW click</option>
