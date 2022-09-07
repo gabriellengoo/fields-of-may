@@ -1309,7 +1309,8 @@ padding: 2vw;
     z-index: 10000;
     position: sticky;
     top: 0;
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
+    /* background: #202064e6; */
   }
   
 
@@ -1327,7 +1328,7 @@ padding: 2vw;
     font-size: 2vw;
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
-    background: #2020643b;
+    background: #202064e6;
   }
   
   
