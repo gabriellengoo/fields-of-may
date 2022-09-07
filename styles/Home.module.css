@@ -11,7 +11,7 @@
 
 .container {
   padding: 0 2rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 .main {
@@ -154,7 +154,7 @@
 
 .centeredElements{
   display: flex;
-  padding-top: var(--s-10);
+  /* padding-top: var(--s-10); */
   flex-wrap: wrap;
   text-transform: uppercase;
   justify-content:  center;
@@ -172,6 +172,7 @@
   /* z-index: 10; */
   display: flex;
   padding: var(--s-20);
+  padding-top: 0px;
   font-size: var( --exx-small-font);
   justify-content: space-between;
   
@@ -187,14 +188,14 @@
 
 .subText{
   justify-content:  center;
-  margin: var(--s-10) auto;
-  padding-top: var(--s-10);
+  /* margin: var(--s-10) auto; */
+  /* padding-top: var(--s-10); */
   mix-blend-mode:difference;
   font-size: var( --xx-small-font);
   text-transform: none;
   width: 100vw;
   padding: var(--s-20);
-  padding-top: 0;
+  /* padding-top: -1000vh; */
   margin-top: 0;
   z-index: 100 !important;
   /* text-transform: uppercase; */
@@ -494,8 +495,9 @@ font-size: .850vw;
 
 
 .livetextContainer{
-  /* height: 50vh; */
+  /* height: 53vh; */
   width: 100vw;
+  z-index: 1000;
   transform-origin: center;
 }
 
@@ -1056,4 +1058,45 @@ z-index: 100 !important; */
   left: 50vw;
   top: 50vh;
   transform: translate(-50%, -50%);
+}
+
+
+
+
+
+/* ------------- Salinty btn */
+.salinitybtn{
+  padding: 0;
+  font-size: 1.2vw;
+  /* display: flex; */
+  /* flex-direction: row; */
+  width: 96vw;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  text-align: center;
+  /* position: fixed; */
+  text-transform: none;
+  border: 1px solid #030bff;
+  mix-blend-mode: difference;
+  color:#0400ff;
+  border-radius: 50%;
+  top: 0;
+  mix-blend-mode: difference;
+}
+
+
+.backlink a{
+  top: 0;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  /* border: 1px solid #e0e0e0; */
+  /* mix-blend-mode: difference; */
+  /* color:#e0e0e0; */
+  border-radius: 50%;
+  font-size: 2vw;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  background: #2020643b;
 }

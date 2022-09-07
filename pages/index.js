@@ -508,6 +508,7 @@ export default function Home() {
                     </div>
 
 
+                    
                     {/*---------------------------- live text ----------- */}
 
 
@@ -579,7 +580,12 @@ export default function Home() {
                     <div className={
                         styles.subText
                     }>
-
+<div className={
+                            styles.salinitybtn
+                        }>
+                    <a href="./">See Salinity changes
+                        </a>
+                        </div>
 
                         <p className={
                             styles.subTextOpacity
