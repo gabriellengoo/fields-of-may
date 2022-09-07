@@ -454,6 +454,10 @@ export default function Home() {
 
 <div >
             <BrowserView>
+
+
+
+
 <div className={
             styles.container
         }>
@@ -583,7 +587,7 @@ export default function Home() {
 <div className={
                             styles.salinitybtn
                         }>
-                    <a href="./">See Salinity changes
+                    <a  href="" >See Salinity changes
                         </a>
                         </div>
 
@@ -592,6 +596,11 @@ export default function Home() {
                         }>The concentration of Baltic Sea Algae as of {dateState} is {valueStatee}. For several decades the Archipelago Research Institute has been measuring the shrinking Herring and traced the cause to the 
                         morphing plankton due to changes in salinity and eutrophication. In short, Algae concentration is an indicator of the Baltic Sea&apos;s health here reflected in the legibility of the font.
                         </p>
+
+
+
+
+
 
 
                         <div className={
