@@ -542,7 +542,7 @@ transform: translate(-50%, 70%) !important;
     /* mix-blend-mode:multiply; */
     transition-duration: 2s;
     text-transform: none;
-    /* font-size: 2rem; */
+    /* font-size: 1.5vh; */
     width: 20%;
 }
 
@@ -1081,12 +1081,55 @@ z-index: 100 !important; */
   /* position: fixed; */
   text-transform: none;
   border: 1px solid #030bff;
-  mix-blend-mode: difference;
   color:#0400ff;
   border-radius: 50%;
   top: 0;
-  mix-blend-mode: difference;
+  transition-duration: 2s;
 }
+
+
+.salinitybtn button{
+  padding: 0;
+  font-size: 1.2vw;
+  /* display: flex; */
+  /* flex-direction: row; */
+  width: 96vw;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  text-align: center;
+  /* position: fixed; */
+  text-transform: none;
+  border: 1px solid #030bff;
+  color:#0400ff;
+  border-radius: 50%;
+  top: 0;
+  transition-duration: 2s;
+color:#030bff;
+font-size: 1.2vw;
+font-family: "Helvetica Neue LT W01_65 Md",helvetica,sans-serif;
+background-color: transparent;
+    border: none;
+}
+
+
+.salinitybtn button:hover{
+  /* color:#ffffff; */
+  font-size: 1.2vw;
+  font-family: "Helvetica Neue LT W01_65 Md",helvetica,sans-serif;
+  background-color: transparent;
+      border: none;
+  }
+
+.salinitybtn:hover{
+  color: white;
+  font-size: 1.2vw;
+  font-family: "Helvetica Neue LT W01_65 Md",helvetica,sans-serif;
+  /* border: 1px solid #ffffff;  */
+  background-color: rgba(0, 0, 0, 0.469);
+  backdrop-filter: blur(4px);
+  transition-duration: 2s;
+  }
 
 
 .backlink a{
@@ -1102,4 +1145,39 @@ z-index: 100 !important; */
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   background: #2020643b;
+}
+
+
+.box{
+  /* position: fixed; */
+  position: absolute;
+    z-index: 10000;
+    top: 24vh;
+    left: 17vw;
+    color: #edff85d4;
+}
+
+
+.boxselect{
+  padding: 0;
+  font-size: 1.2vw;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: none;
+  /* border: 1px solid #030bff;
+  color:#0400ff; */
+  color: #edff85d4;
+  mix-blend-mode: difference;
+  /* border-radius: 50%; */
+  top: 0;
+font-size: 1.2vw;
+font-family: "Helvetica Neue LT W01_65 Md",helvetica,sans-serif;
+background-color: transparent;
+    border: none;
+}
+
+
+.boxselect:hover{
+    border: none;
 }

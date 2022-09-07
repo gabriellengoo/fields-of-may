@@ -3,25 +3,26 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import * as React from 'react';
 import {useEffect} from 'react'
-import { useState } from "react";
-import {
-    BrowserView,
-    MobileView,
-    isBrowser, 
-    isMobile,
-  } from "react-device-detect";
-  import { browserName, CustomView } from "react-device-detect";
-  import Hamburger from 'hamburger-react'
- 
+import {useState} from "react";
+import {BrowserView, MobileView, isBrowser, isMobile} from "react-device-detect";
+import {browserName, CustomView} from "react-device-detect";
+import Hamburger from 'hamburger-react'
+
 
 export default function Home() {
 
+    const [isShown, setIsShown] = useState(false);
     const [isLoaded, setisLoaded] = useState(false);
-  useEffect(() => {
-    setTimeout(() => {
-      setisLoaded(true); 
-    }, 2000);
-  }, []);
+
+
+    useEffect(() => {
+        setTimeout(() => {
+            setisLoaded(true);
+        }, 2000);
+    }, []);
+
+
+
 
     const [isOpen, setOpen] = useState(false)
 
@@ -34,6 +35,14 @@ export default function Home() {
     const [valueStatee, setValueStatee] = React.useState('XXUg/L');
     const [dateState, setDateState] = React.useState('00.00.0000');
     const [faviconState, setFaviconState] = React.useState('/favicon.ico');
+    const handleClick = event => { // 👇️ toggle shown state
+        setIsShown(current => !current);
+
+        // 👇️ or simply set it to true
+        // setIsShown(true);
+    };
+  
+
 
     // fetch value from url and set the value to the state
     React.useEffect(() => {
@@ -96,14 +105,15 @@ export default function Home() {
     }, []);
 
 
-
     return (
         <div>
             <Head>
                 <title>Fields of May</title>
                 <meta name="description" content="Fields of May"/>
-                <link rel="icon" href={faviconState}/>
-                <link rel="apple-touch-icon" href={faviconState} />
+                <link rel="icon"
+                    href={faviconState}/>
+                <link rel="apple-touch-icon"
+                    href={faviconState}/>
                 <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js" defer></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js" defer></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
@@ -115,63 +125,60 @@ export default function Home() {
                 <script src="assets/ui.js" defer></script>
                 <script src="assets/waves.js" defer></script>
             </Head>
-            
-            {isLoaded ? (
-        <>
-      <noscript>You need to enable JavaScript to run this site.</noscript>
+
+            {
+            isLoaded ? (
+                <>
+                    <noscript>You need to enable JavaScript to run this site.</noscript>
 
 
- 
-
-            <MobileView>
-            <div className={
-            styles.containermobile
-        }>
-            <main className={
-                styles.mainmobile
-            }>
+                    <MobileView>
+                        <div className={
+                            styles.containermobile
+                        }>
+                            <main className={
+                                styles.mainmobile
+                            }>
 
 
+                                <div id="tooltip"
+                                    className={
+                                        styles.cursorimg
+                                }>
+                                    <Image src="/assets/images/Fish.png" alt="Herring Fish" width="100px" height="25px"/>
+                                </div>
 
 
-                <div id="tooltip"
-                    className={
-                        styles.cursorimg
-                }>
-                    <Image src="/assets/images/Fish.png" alt="Herring Fish" width="100px" height="25px"/>
-                </div>
+                                {/*---------------------------- hamburger ----------- */}
+                                <div className={
+                                    styles.nav
+                                }>
+
+                                    <div>
+                                        <a href="./">Fields of May</a>
+                                    </div>
+
+                                    <div>
+                                        <a href="./mobilemenu">
+                                            <Hamburger size={50}
+                                                toggled={isOpen}
+                                                toggle={setOpen}/></a>
+                                    </div>
+                                </div>
 
 
+                                <div className={
+                                    styles.subTextmobile
+                                }>
 
 
-
-
-                {/*---------------------------- hamburger ----------- */}
-                <div className={
-                    styles.nav
-                }>
-        
-        <div>  <a href="./">Fields of May</a> </div> 
-    
-                <div>   
-                    <a href="./mobilemenu">        
-                        <Hamburger size={50} toggled={isOpen} toggle={setOpen} /></a>   
-</div>
-                </div>
-
-
-<div className={
-                        styles.subTextmobile
-                    }>
-
-
-                        {/* <p className={
+                                    {/* <p className={
                             styles.subTextOpacity
                         }>The concentration of Baltic Sea Algae as of {dateState} is {valueStatee}. For several decades the Archipelago Research
                          Institute has been measuring the shrinking Herring and traced the cause to the morphing plankton due to changes in salinity and eutrophication. In short, Algae concentration is an indicator of the Baltic Sea&apos;s health here reflected in the legibility of the font.
                         </p> */}
 
-                        {/* <div className={
+                                    {/* <div className={
                     styles.question
                 } >  <a href="./mobileinfo">About</a> </div> 
                     <div className={
@@ -179,143 +186,130 @@ export default function Home() {
                 } >  <a href="./mobileinfo">Past Witness Seminars</a> </div> 
                        <div className={
                     styles.question
-                } >  <a href="./mobileinfo">Witness Seminars</a> </div>  */}
+                } >  <a href="./mobileinfo">Witness Seminars</a> </div>  */} </div>
 
 
-           
-                    </div>
-
-
-                {/*---------------------------- centered text ----------- */}
-                <section className={
-                    styles.centeredElementsmobile
-                }>
-
-
-
-                    {/*---------------------------- live text ----------- */}
-
-
-                    <div className={
-                        styles.livetextWrappermobile
-                    }>
-                        <div className={
-                            styles.livetextContainermobile
-                        }>
-
-
-
-                            <div className={
-                                styles.nppostmobile
-                            }>
-                                <div className={
-                                    styles.livetextmobile
+                                {/*---------------------------- centered text ----------- */}
+                                <section className={
+                                    styles.centeredElementsmobile
                                 }>
-                                    <span className={valueStatemobilehome}>Fields of May</span>
-                                </div>
-                            </div>
-                           
 
 
+                                    {/*---------------------------- live text ----------- */}
 
 
-  
-    
+                                    <div className={
+                                        styles.livetextWrappermobile
+                                    }>
+                                        <div className={
+                                            styles.livetextContainermobile
+                                        }>
 
 
-
-                    {/*---------------------------- Sub text ----------- */}
-                    <div className={
-                        styles.subTextmobile
-                    }>
-
-
-                        <p className={
-                            styles.subTextOpacitymobile
-                        }>The concentration of Baltic Sea Algae as of {dateState} is {valueStatee}. For several decades the Archipelago Research
-                         Institute has been measuring the shrinking Herring and traced the cause to the morphing plankton due to changes in salinity and eutrophication. In short, Algae concentration is an indicator of the Baltic Sea&apos;s health here reflected in the legibility of the font.
-                        </p>
+                                            <div className={
+                                                styles.nppostmobile
+                                            }>
+                                                <div className={
+                                                    styles.livetextmobile
+                                                }>
+                                                    <span className={valueStatemobilehome}>Fields of May</span>
+                                                </div>
+                                            </div>
 
 
-            <div className={
-                            styles.centermobile
-                        }>
-                        <div className={
-                            styles.algaeListContainermobile
-                        }>
-                            <p className={
-                                styles.algaeListTitlemobile
-                            }>Algae Concentration</p>
-
-                            <div className={
-                                styles.algaeListWrappermobile
-                            }>
-
-                                <div className={
-                                    styles.algaeList
-                                }>
-                                    <li className={
-                                        styles.excellentVisiontext
-                                    }>Excellent</li>
-                                    <li className={
-                                        styles.goodVisiontext
-                                    }>Good</li>
-                                    <li className={
-                                        styles.fairVisiontext
-                                    }>Fair</li>
-                                    <li className={
-                                        styles.poorVisiontext
-                                    }>Poor</li>
-                                </div>
-                            </div>
-
-                            <div className={
-                                styles.algaeListWrappermobile
-                            }>
-                                <div className={
-                                    styles.algaeList
-                                }>
-                                    <li className={
-                                        styles.excellentVisiontext
-                                    }>0–2.0</li>
-                                    <li className={
-                                        styles.goodVisiontext
-                                    }>2.1–2.5</li>
-                                    <li className={
-                                        styles.fairVisiontext
-                                    }>2.6–5.8</li>
-                                    <li className={
-                                        styles.poorVisiontext
-                                    }>5.9+</li>
-                                </div>
-                            </div>
+                                            {/*---------------------------- Sub text ----------- */}
+                                            <div className={
+                                                styles.subTextmobile
+                                            }>
 
 
-                            <div className={
-                                styles.algaeListWrappermobile
-                            }>
-                                <div className={
-                                    styles.algaeList
-                                }>
-                                    <li className={
-                                        styles.excellentVisiontext
-                                    }>UG/L</li>
-                                    <li className={
-                                        styles.goodVisiontext
-                                    }>UG/L</li>
-                                    <li className={
-                                        styles.fairVisiontext
-                                    }>UG/L</li>
-                                    <li className={
-                                        styles.poorVisiontext
-                                    }>UG/L</li>
-                                </div>
-                            </div>
-            </div>
+                                                <p className={
+                                                    styles.subTextOpacitymobile
+                                                }>The concentration of Baltic Sea Algae as of {dateState}
+                                                    is {valueStatee}. For several decades the Archipelago Research
+                                                                                                                         Institute has been measuring the shrinking Herring and traced the cause to the morphing plankton due to changes in salinity and eutrophication. In short, Algae concentration is an indicator of the Baltic Sea&apos;s health here reflected in the legibility of the font.
+                                                </p>
 
-</div> 
-                    </div>
-                            {/* <div 
+
+                                                <div className={
+                                                    styles.centermobile
+                                                }>
+                                                    <div className={
+                                                        styles.algaeListContainermobile
+                                                    }>
+                                                        <p className={
+                                                            styles.algaeListTitlemobile
+                                                        }>Algae Concentration</p>
+
+                                                        <div className={
+                                                            styles.algaeListWrappermobile
+                                                        }>
+
+                                                            <div className={
+                                                                styles.algaeList
+                                                            }>
+                                                                <li className={
+                                                                    styles.excellentVisiontext
+                                                                }>Excellent</li>
+                                                                <li className={
+                                                                    styles.goodVisiontext
+                                                                }>Good</li>
+                                                                <li className={
+                                                                    styles.fairVisiontext
+                                                                }>Fair</li>
+                                                                <li className={
+                                                                    styles.poorVisiontext
+                                                                }>Poor</li>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className={
+                                                            styles.algaeListWrappermobile
+                                                        }>
+                                                            <div className={
+                                                                styles.algaeList
+                                                            }>
+                                                                <li className={
+                                                                    styles.excellentVisiontext
+                                                                }>0–2.0</li>
+                                                                <li className={
+                                                                    styles.goodVisiontext
+                                                                }>2.1–2.5</li>
+                                                                <li className={
+                                                                    styles.fairVisiontext
+                                                                }>2.6–5.8</li>
+                                                                <li className={
+                                                                    styles.poorVisiontext
+                                                                }>5.9+</li>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div className={
+                                                            styles.algaeListWrappermobile
+                                                        }>
+                                                            <div className={
+                                                                styles.algaeList
+                                                            }>
+                                                                <li className={
+                                                                    styles.excellentVisiontext
+                                                                }>UG/L</li>
+                                                                <li className={
+                                                                    styles.goodVisiontext
+                                                                }>UG/L</li>
+                                                                <li className={
+                                                                    styles.fairVisiontext
+                                                                }>UG/L</li>
+                                                                <li className={
+                                                                    styles.poorVisiontext
+                                                                }>UG/L</li>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            {/* <div 
                                 className={
                                     styles.nppostnamemobile
                             }>Text legabilaty
@@ -333,45 +327,37 @@ export default function Home() {
 
                                 <p><b> </b>
                                 </p>
-                            </div>  */}
+                            </div>  */} </div>
+                                    </div>
 
 
-                        </div>
-                    </div>
+                                    {/*---------------------------- Sub text ----------- */}
+                                    <div className={
+                                        styles.subTextmobile
+                                    }>
 
 
-  
-    
-
-
-
-                    {/*---------------------------- Sub text ----------- */}
-                    <div className={
-                        styles.subTextmobile
-                    }>
-
-
-                        {/* <p className={
+                                        {/* <p className={
                             styles.subTextOpacity
                         }>The concentration of Baltic Sea Algae as of {dateState} is {valueStatee}. For several decades the Archipelago Research Institute has been measuring the shrinking Herring and traced the cause to the morphing plankton due to changes in salinity and eutrophication. In short, Algae concentration is an indicator of the Baltic Sea's health here reflected in the legibility of the font.
                         </p> */}
 
 
-            <div className={
-                            styles.centermobile
-                        }>
-                        <div className={
-                            styles.algaeListContainermobile
-                        }>
-                            {/* <p className={
+                                        <div className={
+                                            styles.centermobile
+                                        }>
+                                            <div className={
+                                                styles.algaeListContainermobile
+                                            }>
+                                                {/* <p className={
                                 styles.algaeListTitlemobile
                             }>Algae Concentration</p> */}
 
-                            {/* <div className={
+                                                {/* <div className={
                                 styles.algaeListWrappermobile
                             }> */}
 
-                                {/* <div className={
+                                                {/* <div className={
                                     styles.algaeList
                                 }>
                                     <li className={
@@ -389,7 +375,7 @@ export default function Home() {
                                 </div>
                             </div> */}
 
-                            {/* <div className={
+                                                {/* <div className={
                                 styles.algaeListWrappermobile
                             }>
                                 <div className={
@@ -411,7 +397,7 @@ export default function Home() {
                             </div> */}
 
 
-                            {/* <div className={
+                                                {/* <div className={
                                 styles.algaeListWrappermobile
                             }>
                                 <div className={
@@ -430,302 +416,269 @@ export default function Home() {
                                         styles.poorVisiontext
                                     }>UG/L</li>
                                 </div>
-                            </div> */}
-            </div>
+                            </div> */} </div>
 
-</div> 
-                    </div>
-                </section>
-
+                                        </div>
+                                    </div>
+                                </section>
 
 
+                            </main>
+                        </div>
+                    </MobileView>
 
 
+                    {/* ----------------------------------------------------------------Browser  */}
+
+                    <div>
+                        <BrowserView>
 
 
-            </main>
-            </div>
-            </MobileView>
+                            <div className={
+                                styles.container
+                            }>
+                                <main className={
+                                    styles.main
+                                }>
 
 
+                                    <div id="tooltip"
+                                        className={
+                                            styles.cursorimg
+                                    }>
+                                        <Image src="/assets/images/Fish.png" alt="Herring Fish" width="100px" height="25px"/>
+                                    </div>
 
 
-{/* ----------------------------------------------------------------Browser  */}
+                                    {/*---------------------------- horizontal gradient ----------- */}
+                                    <section className={
+                                        styles.gradientTop
+                                    }></section>
 
-<div >
-            <BrowserView>
+
+                                    {/*---------------------------- centered text ----------- */}
+                                    <section className={
+                                        styles.centeredElements
+                                    }>
 
 
+                                        <div className={
+                                            styles.subMenu
+                                        }>
+                                            <a href="./witness-seminar"
+                                                className={
+                                                    styles.linkTop
+                                            }>Witness Seminars
+                                            </a>
 
+
+                                            <a className={
+                                                    styles.linkTop
+                                                }
+                                                href="./past-witness-seminars">Past Witness Seminars</a>
+                                            <a className={
+                                                    styles.linkTop
+                                                }
+                                                href="./about">About</a>
+                                        </div>
+                                       
 
 <div className={
-            styles.container
-        }>
-            <main className={
-                styles.main
-            }>
-
-
-
-
-                <div id="tooltip"
-                    className={
-                        styles.cursorimg
-                }>
-                    <Image src="/assets/images/Fish.png" alt="Herring Fish" width="100px" height="25px"/>
-                </div>
-
-
-
-
-
-
-                {/*---------------------------- horizontal gradient ----------- */}
-                <section className={
-                    styles.gradientTop
-                }></section>
-
-
-                {/*---------------------------- centered text ----------- */}
-                <section className={
-                    styles.centeredElements
-                }>
-
-
-                    <div className={
-                        styles.subMenu
-                    }>
-                        <a href="./witness-seminar" className={
-                            styles.linkTop
-                        }>Witness Seminars
-                        </a>
-
-
-                        <a className={
-                                styles.linkTop
-                            }
-                            href="./past-witness-seminars">Past Witness Seminars</a>
-                        <a className={
-                                styles.linkTop
-                            }
-                            href="./about">About</a>
-                    </div>
-
-
-                    
-                    {/*---------------------------- live text ----------- */}
-
-
-                    <div className={
-                        styles.livetextWrapper
-                    }>
-                        <div className={
-                            styles.livetextContainer
-                        }>
-
-                            {/* <h4 id="log">pageX: -, pageY: -</h4> */}
-
-                            {/* <div id="tooltip"
-                                className={
-                                    styles.livetext
-                            } >
-                                <span className={valueState}>Fields of May</span>
-                            </div> */}
-
-
-                            <div className={
-                                styles.nppost
-                            }>
-                                <div className={
-                                    styles.livetext
-                                }>
-                                    <span className={valueState}>Fields of May</span>
-                                </div>
-                            </div>
-                            {/* <div id="image" id="tooltip"
-                                className={
-                                    styles.nppostname
-                            }>
-                                <p>The concentration of Baltic Sea Algae as of 25.08.2022 is
-                                    <b> {valueStatee}</b>
-                                </p>
-                            </div> */}
-                            <div 
-                                className={
-                                    styles.nppostname
-                            }>Text legabilaty
-                            (through blur) 
-                            representing the Amount of
-                            <a href=" https://goo.gl/maps/sLnY9MYMYfbBCA5y8"
-                                className={
-                                    styles.link
-                            }>
-                                Baltic Sea Algae
-                            </a>
-
-
-
-
-                                <p><b> </b>
-                                </p>
-                            </div> 
-
-
-                        </div>
-                    </div>
-
-
-  
-    
-
-
-
-                    {/*---------------------------- Sub text ----------- */}
-                    <div className={
-                        styles.subText
-                    }>
-<div className={
-                            styles.salinitybtn
-                        }>
-                    <a  href="" >See Salinity changes
-                        </a>
-                        </div>
-
-                        <p className={
-                            styles.subTextOpacity
-                        }>The concentration of Baltic Sea Algae as of {dateState} is {valueStatee}. For several decades the Archipelago Research Institute has been measuring the shrinking Herring and traced the cause to the 
-                        morphing plankton due to changes in salinity and eutrophication. In short, Algae concentration is an indicator of the Baltic Sea&apos;s health here reflected in the legibility of the font.
-                        </p>
-
-
-
-
-
-
-
-                        <div className={
-                            styles.algaeListContainer
-                        }>
-
-
-                            <p className={
-                                styles.algaeListTitle
-                            }>Algae Concentration</p>
-
-                            <div className={
-                                styles.algaeListWrapper
-                            }>
-
-                                <div className={
-                                    styles.algaeList
-                                }>
-                                    <li className={
-                                        styles.excellentVisiontext
-                                    }>Excellent</li>
-                                    <li className={
-                                        styles.goodVisiontext
-                                    }>Good</li>
-                                    <li className={
-                                        styles.fairVisiontext
-                                    }>Fair</li>
-                                    <li className={
-                                        styles.poorVisiontext
-                                    }>Poor</li>
-                                </div>
-                            </div>
-
-                            <div className={
-                                styles.algaeListWrapper
-                            }>
-                                <div className={
-                                    styles.algaeList
-                                }>
-                                    <li className={
-                                        styles.excellentVisiontext
-                                    }>0–2.0</li>
-                                    <li className={
-                                        styles.goodVisiontext
-                                    }>2.1–2.5</li>
-                                    <li className={
-                                        styles.fairVisiontext
-                                    }>2.6–5.8</li>
-                                    <li className={
-                                        styles.poorVisiontext
-                                    }>5.9+</li>
-                                </div>
-                            </div>
-
-
-                            <div className={
-                                styles.algaeListWrapper
-                            }>
-                                <div className={
-                                    styles.algaeList
-                                }>
-                                    <li className={
-                                        styles.excellentVisiontext
-                                    }>UG/L</li>
-                                    <li className={
-                                        styles.goodVisiontext
-                                    }>UG/L</li>
-                                    <li className={
-                                        styles.fairVisiontext
-                                    }>UG/L</li>
-                                    <li className={
-                                        styles.poorVisiontext
-                                    }>UG/L</li>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </section>
-
-
-
-
-
-                {/* Decorative-------------------------------------------------------- */}
-                <section className={
-                    styles.cordiantesContainer
-                }>
-                    <div className={
-                            styles.cordBottomLeft
-                        }
-                        id="cordBottomLeft">
-                        <p className={
-                            styles.cord
-                        }>+ (10°e)</p>
-                    </div>
-
-                    <div className={
-                            styles.cord__bottomMiddle
-                        }
-                        id="cordBottomMiddle">
-                        {/* <p className={styles.plus}>+</p> */}
-                        <p className={
-                            styles.cord
-                        }>+ (20°e)</p>
-                    </div>
-
-                    <div className={
-                            styles.cord__bottomEnd
-                        }
-                        id="cordBottomEnd">
-                        <p className={
-                            styles.cord
-                        }>+ (30°e)</p>
-                    </div>
-                </section>
-
-
-            </main>
-
-
-
-{/* ----------------------------  wave -----------  */}
-            {/* <div className={styles.overlay} id="overlay"></div>
+                                                styles.salinitybtn
+                                            }>
+                                            {/* 👇️ show elements on click */}
+                                            <div>
+                                                <button onClick={handleClick}>See Salinity changes</button>
+                                            </div>
+                                            </div>
+                                            <div> {/* 👇️ show component on click */}
+                                                {
+                                                isShown && <Box/>
+                                            } </div>
+
+                                        {/*---------------------------- live text ----------- */}
+
+
+                                        <div className={
+                                            styles.livetextWrapper
+                                        }>
+                                            <div className={
+                                                styles.livetextContainer
+                                            }>
+                                                <div className={
+                                                    styles.nppost
+                                                }>
+                                                    <div className={
+                                                        styles.livetext
+                                                    }>
+                                                        <span className={valueState}>Fields of May</span>
+                                                    </div>
+                                                </div>
+                               
+                                                <div className={
+                                                    styles.nppostname
+                                                }>Text legabilaty
+                                                                                                                            (through blur) 
+                                                                                                                            representing the Amount of
+                                                    <a href=" https://goo.gl/maps/sLnY9MYMYfbBCA5y8"
+                                                        className={
+                                                            styles.link
+                                                    }>
+                                                        Baltic Sea Algae in real time, Herring Fish size repusents amount of Salinity
+                                                    </a>
+
+
+                                                    <p>
+                                                        <b></b>
+                                                    </p>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+
+                                        {/*---------------------------- Sub text ----------- */}
+                                        <div className={
+                                            styles.subText
+                                        }>
+
+                            
+                                            {/* {
+                                            isShown && (
+                                                <div>
+                                                    <h2>Some content here</h2>
+                                                </div>
+                                            )
+                                        } */}
+
+
+                                            <p className={
+                                                styles.subTextOpacity
+                                            }>The concentration of Baltic Sea Algae as of {dateState} is {valueStatee}. For several decades the Archipelago Research Institute has been measuring the shrinking Herring and traced the cause to the 
+                                                                                                                morphing plankton due to changes in salinity and eutrophication. In short, Algae concentration is an indicator of the Baltic Sea&apos;s health here reflected in the legibility of the font.
+                                            </p>
+
+
+                                            <div className={
+                                                styles.algaeListContainer
+                                            }>
+
+
+                                                <p className={
+                                                    styles.algaeListTitle
+                                                }>Algae Concentration</p>
+
+                                                <div className={
+                                                    styles.algaeListWrapper
+                                                }>
+
+                                                    <div className={
+                                                        styles.algaeList
+                                                    }>
+                                                        <li className={
+                                                            styles.excellentVisiontext
+                                                        }>Excellent</li>
+                                                        <li className={
+                                                            styles.goodVisiontext
+                                                        }>Good</li>
+                                                        <li className={
+                                                            styles.fairVisiontext
+                                                        }>Fair</li>
+                                                        <li className={
+                                                            styles.poorVisiontext
+                                                        }>Poor</li>
+                                                    </div>
+                                                </div>
+
+                                                <div className={
+                                                    styles.algaeListWrapper
+                                                }>
+                                                    <div className={
+                                                        styles.algaeList
+                                                    }>
+                                                        <li className={
+                                                            styles.excellentVisiontext
+                                                        }>0–2.0</li>
+                                                        <li className={
+                                                            styles.goodVisiontext
+                                                        }>2.1–2.5</li>
+                                                        <li className={
+                                                            styles.fairVisiontext
+                                                        }>2.6–5.8</li>
+                                                        <li className={
+                                                            styles.poorVisiontext
+                                                        }>5.9+</li>
+                                                    </div>
+                                                </div>
+
+
+                                                <div className={
+                                                    styles.algaeListWrapper
+                                                }>
+                                                    <div className={
+                                                        styles.algaeList
+                                                    }>
+                                                        <li className={
+                                                            styles.excellentVisiontext
+                                                        }>UG/L</li>
+                                                        <li className={
+                                                            styles.goodVisiontext
+                                                        }>UG/L</li>
+                                                        <li className={
+                                                            styles.fairVisiontext
+                                                        }>UG/L</li>
+                                                        <li className={
+                                                            styles.poorVisiontext
+                                                        }>UG/L</li>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </section>
+
+
+                                    {/* Decorative-------------------------------------------------------- */}
+                                    <section className={
+                                        styles.cordiantesContainer
+                                    }>
+                                        <div className={
+                                                styles.cordBottomLeft
+                                            }
+                                            id="cordBottomLeft">
+                                            <p className={
+                                                styles.cord
+                                            }>+ (10°e)</p>
+                                        </div>
+
+                                        <div className={
+                                                styles.cord__bottomMiddle
+                                            }
+                                            id="cordBottomMiddle">
+                                            {/* <p className={styles.plus}>+</p> */}
+                                            <p className={
+                                                styles.cord
+                                            }>+ (20°e)</p>
+                                        </div>
+
+                                        <div className={
+                                                styles.cord__bottomEnd
+                                            }
+                                            id="cordBottomEnd">
+                                            <p className={
+                                                styles.cord
+                                            }>+ (30°e)</p>
+                                        </div>
+                                    </section>
+
+
+                                </main>
+
+
+                                {/* ----------------------------  wave -----------  */}
+                                {/* <div className={styles.overlay} id="overlay"></div>
         <div className={styles.ui} id="ui">
         <div className={styles.camera} id="camera">
             <canvas className={styles.profile} id="profile" width="350" height="105"></canvas>
@@ -744,24 +697,43 @@ export default function Home() {
                 <div className={styles.choppinesslabel} id="choppiness-label"></div>
             </div>
         </div>
-        <canvas className={styles.simulator} id="simulator"></canvas> */}
-
-
-
-</div>
-</BrowserView>
-</div>
-</>
-      ) : (
-        <div className={styles.loader}>
-          <Image
-            src="/assets/images/loader.gif"
-            width={70}
-            height={70}
-            alt="Loader GIF - Loading fallback"
-          />
-        </div>
-      )}
-          </div>
+        <canvas className={styles.simulator} id="simulator"></canvas> */} </div>
+                        </BrowserView>
+                    </div>
+                </>
+            ) : (
+                <div className={
+                    styles.loader
+                }>
+                    <Image src="/assets/images/loader.gif"
+                        width={70}
+                        height={70}
+                        alt="Loader GIF - Loading fallback"/>
+                </div>
+            )
+        } </div>
     )
+}
+
+
+function Box() {
+    return (
+        <BrowserView>
+            <div>
+                {/* <h2>Box</h2> */}
+                <div className={styles.box}> 
+                <label for="year">Select Year : </label>
+                
+<select className={styles.boxselect} name="year" id="year">
+  <option value="19XW">19XW click</option>
+
+  {/* <Image src="/assets/images/Fish.png" alt="Herring Fish" width="70px" height="25px"/> */}
+  <option value="19XX">19XX</option>
+  <option value="19XY">19XY</option>
+  <option value="19XZ" selected>19XZ</option>
+</select>
+</div>
+            </div>
+        </BrowserView>
+    );
 }
