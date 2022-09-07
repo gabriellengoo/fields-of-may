@@ -151,7 +151,7 @@ export default function Home() {
                     styles.nav
                 }>
         
-        <div>  <a href="./mobileinfo">Fields of May</a> </div> 
+        <div>  <a href="./">Fields of May</a> </div> 
     
                 <div>   
                     <a href="./mobilemenu">        

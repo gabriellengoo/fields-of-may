@@ -112,12 +112,12 @@ export default function Home() {
             }>
 
 
-                    <div id="tooltip"
+                    {/* <div id="tooltip"
                         className={
                             styles.cursorimg
                     }>
                         <Image src="/assets/images/Fish.png" alt="Herring Fish" width="100px" height="25px"/>
-                    </div>
+                    </div> */}
 
 
                     {/*---------------------------- hamburger ----------- */}
@@ -126,7 +126,7 @@ export default function Home() {
                     }>
 
                         <div>
-                            <a href="./mobileinfo">Fields of May</a>
+                            <a href="./">Fields of May</a>
                         </div>
 
                         <div>

@@ -109,12 +109,12 @@ export default function Home() {
 
 </div>
 
-<div id="tooltip"
+{/* <div id="tooltip"
           className={
               styles.cursorimg
       }>
           <Image src="/assets/images/Fish.png" alt="Herring Fish" width="100px" height="25px"/>
-      </div>
+      </div> */}
 
       
 
@@ -132,7 +132,7 @@ export default function Home() {
 
 
   <p id="placeholder" className={
-              styles.title
+              styles.subtitlemobile
           }>Placeholder Text</p>
   <Image src="/assets/images/Placeholder.jpeg" alt="Herring Fish" width="800px" height="400px"/>
        <div className={
@@ -166,7 +166,7 @@ export default function Home() {
 
 
   <p id="placeholder2" className={
-              styles.title
+              styles.subtitlemobile
           }>Placeholder Text</p>
        <div className={
                   styles.contentparagraphmobile

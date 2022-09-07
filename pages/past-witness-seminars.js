@@ -108,12 +108,12 @@ export default function Home() {
 
 </div>
 
-<div id="tooltip"
+{/* <div id="tooltip"
           className={
               styles.cursorimg
       }>
           <Image src="/assets/images/Fish.png" alt="Herring Fish" width="100px" height="25px"/>
-      </div>
+      </div> */}
 
       
        <div className={styles.FixedHeightContainermobile}>

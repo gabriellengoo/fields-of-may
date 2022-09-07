@@ -110,10 +110,10 @@ body {
     background: #00002C;
     transition: all 0.75s ease-in-out;
     transition: opacity 0.35s, padding-left 0.75s;
-    animation: fadein 2s;
-    -moz-animation: fadein 2s; /* Firefox */
-    -webkit-animation: fadein 2s; /* Safari and Chrome */
-    -o-animation: fadein 2s; /* Opera */
+    animation: fadein 1s;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s; /* Safari and Chrome */
+    -o-animation: fadein 1s; /* Opera */
     /* background: #0000ff;   */
     /* background: linear-gradient(to bottom, rgba(0,0,255,0.65) 0%, rgba(0,0,255,0) 100%);    background: radial-gradient(circle at center , #6b70ff 0,#4134ff 20%,#3535ff, #0000ff 100%);    */
     background: radial-gradient(circle at center , #53535396 0,#271d7c76 20%,#00002c, #050567 100%);
