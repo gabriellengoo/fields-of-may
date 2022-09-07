@@ -12,7 +12,7 @@ import {
   import Hamburger from 'hamburger-react'
   import { useState } from "react";
 
-
+ 
 export default function Home() {
 
     let url = 'https://value-parser.herokuapp.com/';
@@ -214,6 +214,8 @@ export default function Home() {
             }>
                   {/* ----------------------------------------------------------------Browser  */}
         <BrowserView>
+
+        
             <main className={
                 styles.main
             }>

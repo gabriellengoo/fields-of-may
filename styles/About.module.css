@@ -1080,7 +1080,7 @@ padding: 2vw;
   .content {
       transition: .25s ease-out;
       width: 100vw;
-      height: calc(10vh + 1px);
+      /* height: calc(50vh + 1px); */
       z-index: 10000;
       /* border: 1px solid #fff; */
       /* border: 1px solidvar(--white); */
@@ -1096,7 +1096,7 @@ padding: 2vw;
   .content2 {
     transition: .25s ease-out;
     width: 100vw;
-    height: calc(10vh + 1px);
+    /* height: calc(50vh + 1px); */
     z-index: 10000;
     /* border: 1px solid #fff; */
     /* border: 1px solidvar(--white); */
@@ -1495,7 +1495,7 @@ padding: 2vw;
       width: 100vw;
       /* height: 100vh; */
       top: 0;
-      z-index: 10;
+      z-index: 50000;
       transition: all 1s ease-out;
     }
     
@@ -1505,7 +1505,7 @@ padding: 2vw;
       /* mix-blend-mode: difference; */
       display: table-cell;
       width: 100vw;
-      z-index: 10;
+      z-index: 50000;
       position: absolute;
       display: flex;
       padding: var(--s-20);
@@ -1518,7 +1518,7 @@ padding: 2vw;
     .subMenu a{
       /* padding-left: var(--s-160);
       padding-right: var(--s-160); */
-      z-index: 10;
+      z-index: 50000;
       display: inline-block;
       justify-content:  space-evenly;
       
@@ -1890,6 +1890,7 @@ background-color: #625fb93c;
           border: .5px solid #e0e0e0;
           justify-content: center;
           z-index: 10;
+          height: 85vh;
           /* color: #e0e0e0;
           mix-blend-mode: difference; */
           
