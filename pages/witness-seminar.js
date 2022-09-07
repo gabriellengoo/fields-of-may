@@ -77,7 +77,7 @@ export default function Home() {
  <main className={
                 styles.mainmobile
             }>
-                
+                 
  {/* <section className={
                     styles.gradientTop
                 }></section> */}
@@ -221,6 +221,7 @@ export default function Home() {
          {/* ----------------------------------------------------------------Browser  */}
 
         <BrowserView>
+        
             <main className={
                 styles.main
             }>

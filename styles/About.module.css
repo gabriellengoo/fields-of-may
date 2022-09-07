@@ -985,6 +985,7 @@ padding: 2vw;
   background-repeat: no-repeat;
   background-size: cover;
   color:#edff85d4;
+  /* z-index: -1; */
 }
 .container {
   padding: 0 2rem;
