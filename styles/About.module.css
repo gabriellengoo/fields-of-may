@@ -1174,7 +1174,7 @@ padding: 2vw;
   
     .popup {
       /* position: fixed; */
-      display: flex;
+      /* display: flex; */
       position: absolute;
       top: 0;
       left: 0;
@@ -1247,7 +1247,7 @@ padding: 2vw;
   
   
   .footer{
-      position: absolute;
+      /* position: absolute; */
       bottom: 0;
   }
   
@@ -1825,7 +1825,7 @@ padding: 2vw;
 
          /* --------------------- Image and text */
   
-      .content{
+      /* .content{
           display: flex;
           flex-direction: column; 
           width: 100%; 
@@ -1837,7 +1837,7 @@ padding: 2vw;
            height: calc(100vh - .3vw);
   overflow-y: auto !important;
   z-index: -1;
-      }
+      } */
 
       .contentmobile{
         display: flex;

@@ -471,14 +471,15 @@ export default function Home() {
                 <div className={styles.paragraphbold}> 
                 <span id="Windsock" className={styles.subheader}>Windsock</span>
                 Last but not least, in honour of one of the Archipelago Research Institute’s important protagonists and research focus, a herring indicator of wind speed and direction, reminding us to, amongst our other oceanic friends, to follow the herring.
+                
                 </div>  
+
+
 
                 </div>
                 
 
-
-
-                   {/*---------------------------- footer----------- */}
+            {/*---------------------------- footer----------- */}
             <footer className={
                 styles.footer
             }>
@@ -487,6 +488,8 @@ export default function Home() {
                 2022 in Seili as part of an exhibition and a public programme in collaboration with the Archipelago Research Institute. http://fieldsofmay.net/
                 </p>           
             </footer>
+
+       
                 </div>
 </section>
 
