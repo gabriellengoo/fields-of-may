@@ -41,7 +41,7 @@ export default function Home() {
         // 👇️ or simply set it to true
         // setIsShown(true);
     };
-  
+ 
 
 
     // fetch value from url and set the value to the state
@@ -115,6 +115,7 @@ export default function Home() {
                 <link rel="apple-touch-icon"
                     href={faviconState}/>
                 <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js" defer></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js" defer></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js" defer></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" defer></link>
@@ -717,21 +718,62 @@ export default function Home() {
 
 
 function Box() {
+    {/* <Image src="/assets/images/Fish.png" alt="Herring Fish" width="70px" height="25px"/> */}
     return (
+        
         <BrowserView>
             <div>
+            <Head>
+                <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js" defer></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js" defer></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js" defer></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" defer></link>
+                <script src="assets/app.js" defer></script>
+                <script src="assets/shared.js" defer></script>
+                <script src="assets/simulation.js" defer></script>
+                <script src="assets/ui.js" defer></script>
+                <script src="assets/waves.js" defer></script>
+            </Head>
+
                 {/* <h2>Box</h2> */}
                 <div className={styles.box}> 
-                <label htmlFor="year">Select Year : </label>
-                
-<select className={styles.boxselect} name="year" id="year">
+                <div className={styles.boxtext}> For several decades the Archipelago Research Institute has been measuring the shrinking Herring and traced the cause to the morphing plankton due to changes in salinity and eutrophication. </div>
+                              
+{/* <select className={styles.boxselect} name="year" id="year">
   <option value="19XW">19XW click</option>
-
-  {/* <Image src="/assets/images/Fish.png" alt="Herring Fish" width="70px" height="25px"/> */}
   <option value="19XX">19XX</option>
   <option value="19XY">19XY</option>
   <option value="19XZ" selected>19XZ</option>
+</select> */}
+<label htmlFor="year">See size changes </label>
+<select className={styles.boxselect} id="myselection">
+	<option>Select Year</option>
+	<option value="One">19XW</option>
+	<option value="Two">19XX</option>
+	<option value="Three">19XY</option>
 </select>
+<div className={styles.myDivwrapper}>
+<div id="showOne" className={styles.myDiv}>
+	<Image src="/assets/images/Fish.png" alt="Herring Fish 19XW" width="100px" height="25px"/>
+    <span>19XW</span>
+</div>
+<div id="showTwo" className={styles.myDiv}>
+<Image src="/assets/images/Fish.png" alt="Herring Fish 19XX" width="200px" height="50px"/>
+<span>19XX</span>
+</div>
+<div id="showThree" className={styles.myDiv}>
+<Image src="/assets/images/Fish.png" alt="Herring Fish 19XY" width="400px" height="100px"/>
+<span>19XY</span>
+</div>
+</div>
+
+
+
+
+
+
+
 </div>
             </div>
         </BrowserView>

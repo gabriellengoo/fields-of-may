@@ -1155,11 +1155,14 @@ background-color: transparent;
     top: 24vh;
     left: 17vw;
     color: #edff85d4;
+    width: 70vw;
+    text-transform: none;
+    
 }
 
 
 .boxselect{
-  padding: 0;
+  padding: 2vw;
   font-size: 1.2vw;
   justify-content: center;
   align-items: center;
@@ -1175,9 +1178,48 @@ font-size: 1.2vw;
 font-family: "Helvetica Neue LT W01_65 Md",helvetica,sans-serif;
 background-color: transparent;
     border: none;
+    float:left;
+    z-index: 10000;
 }
 
 
 .boxselect:hover{
     border: none;
+}
+
+
+.boxtext{
+  padding-bottom: 2vw;
+  width: 40vw;
+}
+
+
+.myDiv{
+	display:none;
+    text-align:center;
+    padding: 2vw;
+ 
+}  
+.myDiv Image{
+  margin: 0 auto;
+}
+.myDiv span{
+	text-align: center;
+    padding: 6px 10px;
+    display: block;
+    margin: 8px auto;
+}
+#showOne{
+    padding:10px;
+}
+#showTwo{
+    padding:10px;
+}
+#showThree{
+    padding:10px;
+}
+
+.myDivwrapper{
+  display:flex;
+  width:100%;
 }
