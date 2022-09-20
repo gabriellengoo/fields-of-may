@@ -157,12 +157,12 @@ export default function Home() {
                         <div className={
                             styles.question
                         }>
-                            <a href="./witness-seminar">Witness Seminars</a>
+                            <a href="./witness-seminar-in-seili">Witness Seminars</a>
                         </div>
                         <div className={
                             styles.question
                         }>
-                            <a href="./past-witness-seminars">Past Witness Seminars</a>
+                            <a href="./a-witness-seminar-how-to">A Witness Seminar How-To</a>
                         </div>
 
 
@@ -265,7 +265,7 @@ export default function Home() {
                                 <a className={
                                         styles.linkTop
                                     }
-                                    href="./commingsoon">Past Witness Seminars</a>
+                                    href="./commingsoon">A Witness Seminar How-To</a>
                                 <a className={
                                         styles.linkTop
                                     }

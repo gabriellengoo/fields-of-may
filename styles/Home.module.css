@@ -13,7 +13,7 @@
 
 
 .container {
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
   padding-top: 1rem;
 }
 
@@ -21,9 +21,9 @@
   min-height: 100vh;
   /* padding: 4rem 0; */
   /* background: radial-gradient(circle at center , #53535396 0,#271d7c76 20%,#00002c, #050567 100%); */
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+  /* flex: 1; */
+  /* display: flex; */
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   
@@ -171,15 +171,16 @@
   margin-right:  auto;
   /* mix-blend-mode:difference; */
   display: table-cell;
-  width:100vw; 
+  width: 80vw;
+  /* margin: var(--s-10) auto; */
   /* z-index: 10; */
   display: flex;
-  padding: var(--s-20);
+  /* padding: var(--s-20); */
   padding-top: 0px;
   font-size: var( --exx-small-font);
   justify-content: space-between;
-  
 }
+
 .subMenu a{
   /* padding-left: var(--s-160);
   padding-right: var(--s-160); */
@@ -198,7 +199,7 @@
   text-transform: none;
   width: 100vw;
   padding: var(--s-20);
-  /* padding-top: -1000vh; */
+  padding-top: 0vh;
   margin-top: 0;
   z-index: 100 !important;
   /* text-transform: uppercase; */
@@ -207,7 +208,7 @@
 
 .subTextOpacity{
   position: relative;
-  text-align: center;
+  text-align: left;
   word-spacing: .5rem;
   font-size: var( --ex-small-font);
   margin: var(--s-10) auto;
@@ -215,18 +216,19 @@
   width: 80vw;
   z-index: 100 !important;
   /* border-radius: 5vw; */
-  border-bottom: 1px solid rgb(21, 0, 255);
+  border-bottom: 1px solid rgb(255, 255, 255);
   padding: calc(.5vw + 1px);
   text-transform: uppercase;
     align-items: center;
     font-size: .9rem;
-    /* color: white; */
+    color: white;
+    mix-blend-mode:difference;
     text-transform: none;
 }
 
 .subTextOpacitymobile{
   position: relative;
-  text-align: center;
+  text-align: left;
   word-spacing: .5rem;
   font-size: var( --ex-small-font);
   margin: var(--s-10) auto;
@@ -258,12 +260,17 @@
   margin: 0 auto;
   font-size: var( --ex-small-font);
   padding-top: var(--s-10);
+  margin: var(--s-10) auto;
+    justify-content: center;
+    width: 80vw;
+    color: white;
+    mix-blend-mode:difference;
 }
 
 
 .algaeListContainer div{
   /* width:50%; */
-  width: 47vw;
+  width: 38.5vw;
   /* display: flex; */
   /* justify-content: center; */
   justify-content: space-between;
@@ -354,11 +361,13 @@
   text-decoration: none;
   transition: opacity 0.35s, padding-top 0.75s;
   border-radius: 5vw;
-  border: 1px solid rgb(21, 0, 255);
+  border: 1px solid rgb(255, 255, 255);
   padding: calc(.5vw + 1px);
   justify-content: center;
   /* background-color:rgb(14, 0, 168); */
-  /* color:rgb(4, 4, 61); */
+  color:rgb(255, 255, 255);
+  z-index: 100;
+  mix-blend-mode: difference;
   display: flex;
     justify-content: center;
     align-items: center;
@@ -412,7 +421,7 @@
 /* ----------------------- Live font */
 
 .livetextContainer{
-  display:flex;
+  /* display:flex; */
   margin: auto;
   width: 100%;
   /* height: 20%; */
@@ -420,7 +429,7 @@
 
 
 .livetext {
-  margin-top: auto;
+  /* margin-top: auto; */
   line-height: var( --line-height);
   font-size: var( --large-font);
   font-weight: 300;
@@ -428,6 +437,8 @@
   text-transform: uppercase;
   font-family: 'PicNic';
   padding: var(--s-40);
+  padding-bottom: 0;
+  padding-top: 0;
   pointer-events: none;
   transition:none;
   z-index: 100 !important;
@@ -488,10 +499,13 @@ font-size: .850vw;
 
 
 .livetext{
-  display: inline-block;
+  /* display: inline-block; */
   transform-origin: 0 0;
-  width: 100vw;
-  height: 54vh;
+  width: 87vw;
+  height: 60vh;
+  margin: auto;
+  align-content: center;
+  justify-content: center;
   z-index: 1000;
   mix-blend-mode: difference;
 }

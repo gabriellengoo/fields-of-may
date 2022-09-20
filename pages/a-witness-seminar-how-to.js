@@ -97,7 +97,7 @@ export default function Home() {
                     <div className={
                             styles.titleMobile
                         }>
-                        <a href="./past-witness-seminars">Past Witness Seminars</a>
+                        <a href="./a-witness-seminar-how-to">A Witness Seminar How-To</a>
                     </div>
                     <div>  
                     <a className={styles.hamburgernav} href="./mobilemenu">        
@@ -234,28 +234,42 @@ export default function Home() {
                     </div>
 
 
-                    <div className={
-                        styles.subMenu
-                    }>
-                        <a href="./witness-seminar"
-                            className={
-                                styles.linkTop
-                        }>Witness Seminars
-                        </a>
+                    <div className={styles.contentHeader}>
 
 
-                        <a className={
-                                styles.linkTop
-                            }
-                            href="./past-witness-seminars">Past Witness Seminars</a>
-                        <a className={
-                                styles.linkTop
-                            }
-                            href="./about">About</a>
+
+<div className={
+                                styles.subMenu
+                            }>
+                                  <a href="./"
+                                    className={
+                                        styles.linkTop
+                                }>Fields of May
+
+                                </a>
+
+                                <a href="./witness-seminar-in-seili"
+                                    className={
+                                        styles.linkTop
+                                }>Witness Seminar in Seili
+                                </a>
+
+
+                                <a className={
+                                        styles.linkTop
+                                    }
+                                    href="./a-witness-seminar-how-to">A Witness Seminar How-To</a>
+                                <a className={
+                                        styles.linkTop
+                                    }
+                                    href="./about">About</a>
+                            </div>
 
                             
-                    </div>
 
+
+
+</div>
 
 
                     <div className={
@@ -268,7 +282,7 @@ export default function Home() {
                         }>
 
 
-<div className={
+{/* <div className={
                             styles.backlink
                         }>
                             <div><a href="./"
@@ -276,7 +290,7 @@ export default function Home() {
                                 Back
                             </a></div>
                             
-                            </div>
+                            </div> */}
 
 
                             <p className={

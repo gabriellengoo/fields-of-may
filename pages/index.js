@@ -32,7 +32,7 @@ export default function Home() {
     const [valueState, setValueState] = React.useState(styles.goodVision);
     const [valueStatemobile, setValueStatemobile] = React.useState(styles.goodVisionmobile);
     const [valueStatemobilehome, setValueStatemobilehome] = React.useState(styles.goodVisionmobilehome);
-    const [valueStatee, setValueStatee] = React.useState('XXUg/L');
+    const [valueStatee, setValueStatee] = React.useState('XXµg/l');
     const [dateState, setDateState] = React.useState('00.00.0000');
     const [faviconState, setFaviconState] = React.useState('/favicon.ico');
     const handleClick = event => { // 👇️ toggle shown state
@@ -51,7 +51,7 @@ export default function Home() {
             setDateState(arr[0]);
 
 
-            // fetch XXUg/L value
+            // fetch XXµg/l value
             let arrr = data.split(' ');
             setValueStatee(arrr[2]);
 
@@ -127,9 +127,9 @@ export default function Home() {
                 <script src="assets/waves.js" defer></script>
             </Head>
 
-            {
+            {/* {
             isLoaded ? (
-                <>
+                <> */}
                     <noscript>You need to enable JavaScript to run this site.</noscript>
 
 
@@ -142,12 +142,12 @@ export default function Home() {
                             }>
 
 
-                                <div id="tooltip"
+                                {/* <div id="tooltip"
                                     className={
                                         styles.cursorimg
                                 }>
                                     <Image src="/assets/images/Fish.png" alt="Herring Fish" width="100px" height="25px"/>
-                                </div>
+                                </div> */}
 
 
                                 {/*---------------------------- hamburger ----------- */}
@@ -294,16 +294,16 @@ export default function Home() {
                                                             }>
                                                                 <li className={
                                                                     styles.excellentVisiontext
-                                                                }>UG/L</li>
+                                                                }>µg/l</li>
                                                                 <li className={
                                                                     styles.goodVisiontext
-                                                                }>UG/L</li>
+                                                                }>µg/l</li>
                                                                 <li className={
                                                                     styles.fairVisiontext
-                                                                }>UG/L</li>
+                                                                }>µg/l</li>
                                                                 <li className={
                                                                     styles.poorVisiontext
-                                                                }>UG/L</li>
+                                                                }>µg/l</li>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -406,16 +406,16 @@ export default function Home() {
                                 }>
                                     <li className={
                                         styles.excellentVisiontext
-                                    }>UG/L</li>
+                                    }>µg/l</li>
                                     <li className={
                                         styles.goodVisiontext
-                                    }>UG/L</li>
+                                    }>µg/l</li>
                                     <li className={
                                         styles.fairVisiontext
-                                    }>UG/L</li>
+                                    }>µg/l</li>
                                     <li className={
                                         styles.poorVisiontext
-                                    }>UG/L</li>
+                                    }>µg/l</li>
                                 </div>
                             </div> */} </div>
 
@@ -466,36 +466,43 @@ export default function Home() {
                                         <div className={
                                             styles.subMenu
                                         }>
-                                            <a href="./witness-seminar"
+                                              <a href="./"
                                                 className={
                                                     styles.linkTop
-                                            }>Witness Seminars
+                                            }>Fields of May
+
+                                            </a>
+
+                                            <a href="./witness-seminar-in-seili"
+                                                className={
+                                                    styles.linkTop
+                                            }>Witness Seminar in Seili
                                             </a>
 
 
                                             <a className={
                                                     styles.linkTop
                                                 }
-                                                href="./past-witness-seminars">Past Witness Seminars</a>
+                                                href="./a-witness-seminar-how-to">A Witness Seminar How-To</a>
                                             <a className={
                                                     styles.linkTop
                                                 }
                                                 href="./about">About</a>
                                         </div>
                                        
-
-<div className={
+ {/* Sanity button------ */}
+{/* <div className={
                                                 styles.salinitybtn
                                             }>
-                                            {/* 👇️ show elements on click */}
+                                          
                                             <div>
                                                 <button onClick={handleClick}>See Salinity changes</button>
                                             </div>
                                             </div>
-                                            <div> {/* 👇️ show component on click */}
+                                            <div> 
                                                 {
                                                 isShown && <Box/>
-                                            } </div>
+                                            } </div> */}
 
                                         {/*---------------------------- live text ----------- */}
 
@@ -516,7 +523,21 @@ export default function Home() {
                                                     </div>
                                                 </div>
                                
-                                                <div className={
+    <div className={styles.myDivwrapper}>
+<div id="showOne" className={styles.myDiv}>
+<Image src="/assets/images/Fish.png" alt="Herring Fish 19XW" width="100px" height="25px"/>
+</div>
+
+<div id="showTwo" className={styles.myDiv}>
+<Image src="/assets/images/Fish.png" alt="Herring Fish 19XX" width="200px" height="50px"/>
+</div>
+
+<div id="showThree" className={styles.myDiv}>
+<Image src="/assets/images/Fish.png" alt="Herring Fish 19XY" width="400px" height="100px"/>
+</div>
+</div>
+
+                                                {/* <div className={
                                                     styles.nppostname
                                                 }>Text legabilaty
                                                                                                                             (through blur) 
@@ -532,7 +553,7 @@ export default function Home() {
                                                     <p>
                                                         <b></b>
                                                     </p>
-                                                </div>
+                                                </div> */}
 
 
                                             </div>
@@ -622,16 +643,16 @@ export default function Home() {
                                                     }>
                                                         <li className={
                                                             styles.excellentVisiontext
-                                                        }>UG/L</li>
+                                                        }>µg/l</li>
                                                         <li className={
                                                             styles.goodVisiontext
-                                                        }>UG/L</li>
+                                                        }>µg/l</li>
                                                         <li className={
                                                             styles.fairVisiontext
-                                                        }>UG/L</li>
+                                                        }>µg/l</li>
                                                         <li className={
                                                             styles.poorVisiontext
-                                                        }>UG/L</li>
+                                                        }>µg/l</li>
                                                     </div>
                                                 </div>
                                             </div>
@@ -701,7 +722,7 @@ export default function Home() {
         <canvas className={styles.simulator} id="simulator"></canvas> */} </div>
                         </BrowserView>
                     </div>
-                </>
+                {/* </>
             ) : (
                 <div className={
                     styles.loader
@@ -712,61 +733,54 @@ export default function Home() {
                         alt="Loader GIF - Loading fallback"/>
                 </div>
             )
-        } </div>
+        }  */}
+        </div>
     )
 }
 
 
-function Box() {
-    {/* <Image src="/assets/images/Fish.png" alt="Herring Fish" width="70px" height="25px"/> */}
-    return (
+// function Box() {
+//     return (
         
-        <BrowserView>
-            <div>
-            <Head>
-                <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js" defer></script>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js" defer></script>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js" defer></script>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" defer></link>
-                <script src="assets/app.js" defer></script>
-                <script src="assets/shared.js" defer></script>
-                <script src="assets/simulation.js" defer></script>
-                <script src="assets/ui.js" defer></script>
-                <script src="assets/waves.js" defer></script>
-            </Head>
+//         <BrowserView>
+//             <div>
+//             <Head>
+//                 <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js" defer></script>
+//                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js" defer></script>
+//                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js" defer></script>
+//                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
+//                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" defer></link>
+//                 <script src="assets/app.js" defer></script>
+//                 <script src="assets/shared.js" defer></script>
+//                 <script src="assets/simulation.js" defer></script>
+//                 <script src="assets/ui.js" defer></script>
+//                 <script src="assets/waves.js" defer></script>
+//             </Head>
 
-                {/* <h2>Box</h2> */}
-                <div className={styles.box}> 
-                <div className={styles.boxtext}> For several decades the Archipelago Research Institute has been measuring the shrinking Herring and traced the cause to the morphing plankton due to changes in salinity and eutrophication. </div>
-                              
-{/* <select className={styles.boxselect} name="year" id="year">
-  <option value="19XW">19XW click</option>
-  <option value="19XX">19XX</option>
-  <option value="19XY">19XY</option>
-  <option value="19XZ" selected>19XZ</option>
-</select> */}
-<label htmlFor="year">See size changes </label>
-<select className={styles.boxselect} id="myselection">
-	<option>Select Year</option>
-	<option value="One">19XW</option>
-	<option value="Two">19XX</option>
-	<option value="Three">19XY</option>
-</select>
-<div className={styles.myDivwrapper}>
-<div id="showOne" className={styles.myDiv}>
-	<Image src="/assets/images/Fish.png" alt="Herring Fish 19XW" width="100px" height="25px"/>
-    <span>19XW</span>
-</div>
-<div id="showTwo" className={styles.myDiv}>
-<Image src="/assets/images/Fish.png" alt="Herring Fish 19XX" width="200px" height="50px"/>
-<span>19XX</span>
-</div>
-<div id="showThree" className={styles.myDiv}>
-<Image src="/assets/images/Fish.png" alt="Herring Fish 19XY" width="400px" height="100px"/>
-<span>19XY</span>
-</div>
-</div>
+//                 <div className={styles.box}> 
+//                 <div className={styles.boxtext}> For several decades the Archipelago Research Institute has been measuring the shrinking Herring and traced the cause to the morphing plankton due to changes in salinity and eutrophication. </div>
+
+// <label htmlFor="year">See size changes </label>
+// <select className={styles.boxselect} id="myselection">
+// 	<option>Select Year</option>
+// 	<option value="One">19XW</option>
+// 	<option value="Two">19XX</option>
+// 	<option value="Three">19XY</option>
+// </select>
+// <div className={styles.myDivwrapper}>
+// <div id="showOne" className={styles.myDiv}>
+// 	<Image src="/assets/images/Fish.png" alt="Herring Fish 19XW" width="100px" height="25px"/>
+//     <span>19XW</span>
+// </div>
+// <div id="showTwo" className={styles.myDiv}>
+// <Image src="/assets/images/Fish.png" alt="Herring Fish 19XX" width="200px" height="50px"/>
+// <span>19XX</span>
+// </div>
+// <div id="showThree" className={styles.myDiv}>
+// <Image src="/assets/images/Fish.png" alt="Herring Fish 19XY" width="400px" height="100px"/>
+// <span>19XY</span>
+// </div>
+// </div>
 
 
 
@@ -774,8 +788,8 @@ function Box() {
 
 
 
-</div>
-            </div>
-        </BrowserView>
-    );
-}
+// </div>
+//             </div>
+//         </BrowserView>
+//     );
+// }

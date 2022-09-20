@@ -33,7 +33,7 @@ div::-webkit-scrollbar {
   --med-font: 24pt;
   --large-font: 18.425vw;
   --xl-large-font: 20.425vw;
-  --line-height: 10.425vw;
+  --line-height: 14.425vw;
 }
 
 
@@ -125,6 +125,11 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/* p{
+  color: white;
+  mix-blend-mode:difference;
+} */
 
 section{
   transition: margin-top 0.75s ease-in-out;
