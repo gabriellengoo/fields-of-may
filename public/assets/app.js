@@ -3,8 +3,6 @@ console.log("hi im runnng");
 
 // ---------------- drop down ----------------
 
-
-
   // ----------------------------------- herring fish ----------------------------------------------------
   $(document).ready(function(){
     $('#myselection').on('change', function(){

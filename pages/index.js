@@ -506,6 +506,27 @@ export default function Home() {
 
                                         {/*---------------------------- live text ----------- */}
 
+                                        <div className={styles.fish}>
+                                        {/* className={styles.nppost} */}
+                                        <div className={styles.nppost}>
+<div >
+<Image src="/assets/images/Fish.png" alt="Herring Fish 19XW" width="100px" height="25px"/>
+</div>
+
+<div >
+<Image src="/assets/images/Fish.png" alt="Herring Fish 19XX" width="200px" height="50px"/>
+</div>
+
+<div >
+<Image src="/assets/images/Fish.png" alt="Herring Fish 19XY" width="400px" height="100px"/>
+</div>
+</div> 
+
+<div className={ styles.nppostname }>This is placeholder text</div> 
+{/* <div className={ styles.nppostnamee }>This is placeholder text 2</div> 
+<div className={ styles.nppostname }>This is placeholder text 3</div>  */}
+
+</div>
 
                                         <div className={
                                             styles.livetextWrapper
@@ -523,19 +544,7 @@ export default function Home() {
                                                     </div>
                                                 </div>
                                
-    <div className={styles.myDivwrapper}>
-<div id="showOne" className={styles.myDiv}>
-<Image src="/assets/images/Fish.png" alt="Herring Fish 19XW" width="100px" height="25px"/>
-</div>
 
-<div id="showTwo" className={styles.myDiv}>
-<Image src="/assets/images/Fish.png" alt="Herring Fish 19XX" width="200px" height="50px"/>
-</div>
-
-<div id="showThree" className={styles.myDiv}>
-<Image src="/assets/images/Fish.png" alt="Herring Fish 19XY" width="400px" height="100px"/>
-</div>
-</div>
 
                                                 {/* <div className={
                                                     styles.nppostname

@@ -219,7 +219,9 @@ export default function Home() {
 
 
          {/* ----------------------------------------------------------------Browser  */}
-
+         <div className={
+                styles.container
+            }>
         <BrowserView>
         
             <main className={
@@ -340,7 +342,7 @@ export default function Home() {
                 }></section>
             </main>
             </BrowserView>
-
+            </div>
         </div>
 
 

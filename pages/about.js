@@ -73,6 +73,7 @@ export default function Home() {
                 <meta name="description" content="Fields of May"/>
                 <link rel="icon" href={faviconState}/>
                 <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js" defer></script>
+                <script src="https://code.jquery.com/jquery-1.11.1.min.js" defer></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" defer></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
                 <script src="assets/app.js" defer></script>
@@ -145,6 +146,8 @@ export default function Home() {
             Fields of May is an infrastructure converging practices and historical-material specificity which create the conditions of possibility to conjure worlds attuned to non-extractive rhythms.
        </div>
 
+
+ 
        {/* <nav>
   <ul className={styles.dropdownclosed}>
     <li><a href="#" className={styles.navbutton}>Home</a></li>
@@ -294,7 +297,7 @@ export default function Home() {
 
 
 
-    <section className={styles.content}>
+    <section className={styles.contentabout}>
         <div className={styles.contentSection}>
             <div className={styles.contentHeader}>
 
