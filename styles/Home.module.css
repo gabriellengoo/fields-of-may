@@ -641,6 +641,7 @@ transform: translate(-50%, 70%) !important;
 z-index: 10000;
     pointer-events: none;
     transition-duration: 1.5s;
+    mix-blend-mode: multiply;
 }
 
 
