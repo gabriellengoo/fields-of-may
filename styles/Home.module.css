@@ -270,7 +270,7 @@
 
 .algaeListContainer div{
   /* width:50%; */
-  width: 38.5vw;
+  width: 8.5vw;
   /* display: flex; */
   /* justify-content: center; */
   justify-content: space-between;
@@ -1309,10 +1309,10 @@ background-color: transparent;
   position:absolute;
   z-index:100000;
   position: fixed;
-  left: 25%;
-  top: 40%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  left: 5%;
+  top: 15%;
+  /* transform: translate(-50%, -50%); */
+  /* text-align: center; */
   width: 100vw;
 }
 
@@ -1320,7 +1320,7 @@ background-color: transparent;
 
 .fish div{
   padding: 2vw;
-  align-items: center;
+  /* align-items: center;
   vertical-align: middle;
-  text-align: center;
+  text-align: center; */
 }

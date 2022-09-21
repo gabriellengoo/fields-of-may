@@ -514,15 +514,15 @@ export default function Home() {
 </div>
 
 <div >
-<Image src="/assets/images/Fish.png" alt="Herring Fish 19XX" width="200px" height="50px"/>
+<Image src="/assets/images/Fish.png" alt="Herring Fish 19XX" width="150px" height="35px"/>
 </div>
 
 <div >
-<Image src="/assets/images/Fish.png" alt="Herring Fish 19XY" width="400px" height="100px"/>
+<Image src="/assets/images/Fish.png" alt="Herring Fish 19XY" width="200px" height="45px"/>
 </div>
 </div> 
 
-<div className={ styles.nppostname }>This is placeholder text</div> 
+<div className={ styles.nppostname }>Average Baltic herring size in 2000: 16cm</div> 
 {/* <div className={ styles.nppostnamee }>This is placeholder text 2</div> 
 <div className={ styles.nppostname }>This is placeholder text 3</div>  */}
 
