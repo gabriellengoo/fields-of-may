@@ -243,3 +243,25 @@ select:-moz-focusring {
   text-shadow: 0 0 0 #000;
 }
 
+
+    /* ---------sub menu mobile*/
+select {
+  width: 80vw;
+  overflow: hidden;
+  white-space: pre;
+  text-overflow: ellipsis;
+  background-color: #ff7f5000;
+  border: #00ffff00;
+  color: rgb(10, 199, 39);
+  font-size: 4.6vw;
+  backdrop-filter: blur(4px);
+  background: #2020643b;
+  /* position: relative;
+  top: 1vh;
+  height: 5vh; */
+  /* -webkit-appearance: none; */
+}
+
+option {
+  border: solid 1px #DDDDDD;
+}

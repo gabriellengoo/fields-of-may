@@ -122,7 +122,7 @@ export default function Home() {
 
 
 <div className={styles.mobilenav}>
-<div className={styles.contentTitlemobile}>
+                <div className={styles.contentTitlemobile}>
                     <div className={
                             styles.titleMobile
                         }>
@@ -131,18 +131,44 @@ export default function Home() {
                     <div>  
                     <a className={styles.hamburgernav} href="./mobilemenu">        
                         <Hamburger size={50} toggled={isOpen} toggle={setOpen} /></a>   
-</div>
+                    </div>
                 </div>
-
-
 </div>
+
+
+
+
 
 
       
        <div className={styles.FixedHeightContainermobile}>
   <div className={styles.Content}>
 
-  <div className={styles.paragraph}>
+  <div className={styles.mobilenavsub}>
+
+  <div className={styles.dropdown}>
+        <label for="toggle-1">Scroll</label>
+        <input type="checkbox" id="toggle-1" />
+        <ul>
+          <li><a href="#On-Rhythm">On Rhythm</a></li>
+          <li> <a href="#Material-specificity"> Material Specificity </a> </li>
+          <li> <a href="#Popular-Court-History"> Popular Court History </a></li>
+          <li>  <a href="#Blue-economy-tribunal"> Blue economy tribunal </a></li>
+
+          <li>    <a href="#Future-tradition"> Future tradition </a></li>
+          <li>    <a href="#Legal-ecologies"> Legal ecologies </a> </li>
+          <li>     <a href="#Commoning"> Commoning </a></li>
+          <li>  <a href="#Commoning-Knowledge"> Commoning knowledge </a></li>
+          <li>    <a href="#A-convergence-of-practice"> A convergence of practices </a></li>
+          <li>     <a href="#Windsock"> Windsock </a> </li>
+        </ul>
+      </div>
+
+</div>
+
+
+
+  <div className={styles.paragraph1}>
             Fields of May is an infrastructure converging practices and historical-material specificity which create the conditions of possibility to conjure worlds attuned to non-extractive rhythms.
        </div>
 
@@ -315,17 +341,17 @@ export default function Home() {
 
                                             <a href="./witness-seminar-in-seili"
                                                 className={
-                                                    styles.linkTop
+                                                    styles.linkTop1
                                             }>Witness Seminar in Seili
                                             </a>
 
 
                                             <a className={
-                                                    styles.linkTop
+                                                    styles.linkTop2
                                                 }
                                                 href="./a-witness-seminar-how-to">A Witness Seminar How-To</a>
                                             <a className={
-                                                    styles.linkTop
+                                                    styles.linkTop3
                                                 }
                                                 href="./about">About</a>
                                         </div>

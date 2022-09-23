@@ -210,7 +210,7 @@
   position: relative;
   text-align: left;
   word-spacing: .5rem;
-  font-size: var( --ex-small-font);
+  /* font-size: var( --ex-small-font); */
   margin: var(--s-10) auto;
   justify-content:  center;
   width: 80vw;
@@ -362,7 +362,8 @@
   transition: opacity 0.35s, padding-top 0.75s;
   border-radius: 5vw;
   border: 1px solid rgb(255, 255, 255);
-  padding: calc(.5vw + 1px);
+  border-radius: 60% 20% 50% 30% / 70%;
+  padding: calc(1vw + 1px);
   justify-content: center;
   /* background-color:rgb(14, 0, 168); */
   color:rgb(255, 255, 255);
@@ -371,8 +372,61 @@
   display: flex;
     justify-content: center;
     align-items: center;
-    text-transform: none;
-  
+    text-transform: none; 
+}
+
+.linkTop1{
+  text-decoration: none;
+  transition: opacity 0.35s, padding-top 0.75s;
+  border-radius: 5vw;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 70% 50% 50% 60% / 70%;
+  padding: calc(1vw + 1px);
+  justify-content: center;
+  /* background-color:rgb(14, 0, 168); */
+  color:rgb(255, 255, 255);
+  z-index: 100;
+  mix-blend-mode: difference;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: none; 
+}
+
+.linkTop2{
+  text-decoration: none;
+  transition: opacity 0.35s, padding-top 0.75s;
+  border-radius: 5vw;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 70% 50% 50% 60% / 70%;
+  padding: calc(1vw + 1px);
+  justify-content: center;
+  /* background-color:rgb(14, 0, 168); */
+  color:rgb(255, 255, 255);
+  z-index: 100;
+  mix-blend-mode: difference;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: none; 
+}
+
+.linkTop3{
+  text-decoration: none;
+  transition: opacity 0.35s, padding-top 0.75s;
+  border-radius: 5vw;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 70% 50% 50% 60% / 70%;
+  padding: calc(1vw + 1px);
+  justify-content: center;
+  /* background-color:rgb(14, 0, 168); */
+  color:rgb(255, 255, 255);
+  z-index: 100;
+  mix-blend-mode: difference;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: none; 
 }
 
 .linkTopActive{
@@ -540,7 +594,7 @@ font-size: .850vw;
   justify-content:  center;
 position: absolute;
 z-index: 1000;
-top: 0%;
+top: 15%;
 left: 70% !important;
 /* margin-right: -50% !important; */
 transform: translate(-50%, 70%) !important;
@@ -558,6 +612,7 @@ transform: translate(-50%, 70%) !important;
     text-transform: none;
     /* font-size: 1.5vh; */
     width: 20%;
+    font-size: .9rem;
 }
 
 .nppost:hover + .nppostname {
@@ -566,8 +621,13 @@ transform: translate(-50%, 70%) !important;
     transition-duration: 1.5s;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
-            z-index: 10000;
+            z-index: 10000;      
 }
+
+/* .nppost{
+  padding-top: 2vw; 
+} */
+
 .nppostnamee {
   text-align: center;
   justify-content:  center;
@@ -591,6 +651,7 @@ transform: translate(-50%, 70%) !important;
     text-transform: none;
     /* font-size: 1.5vh; */
     width: 20%;
+    font-size: .9rem;
 }
 
 .nppostt:hover + .nppostnamee {
@@ -606,7 +667,7 @@ transform: translate(-50%, 70%) !important;
   justify-content:  center;
 position: absolute;
 z-index: 1000;
-top: -20%;
+top: 15%;
 left: 70% !important;
 /* margin-right: -50% !important; */
 transform: translate(-50%, 70%) !important;
@@ -624,6 +685,7 @@ transform: translate(-50%, 70%) !important;
     text-transform: none;
     /* font-size: 1.5vh; */
     width: 20%;
+    font-size: .9rem;
 }
 
 .npposttt:hover + .nppostnameee {
@@ -1305,21 +1367,50 @@ background-color: transparent;
   width:100%;
 }
 
+.fishContainer{
+  position: absolute; 
+  /* position:fixed; */
+top: 20vh;
+}
+.fishContainer2{
+  position: absolute; 
+  /* position:fixed; */
+  top: 30vh;
+  }
+  .fishContainer3{
+    position: absolute; 
+    /* position:fixed; */
+    top: 40vh;
+    }
 
-.fish{
-  position:absolute;
+.fishWrapper{
+  position:fixed;
   z-index:100000;
-  position: fixed;
-  left: 5%;
+  position: relative;
+  left: 8%;
   top: 15%;
+  /* padding: 2vw; */
   /* transform: translate(-50%, -50%); */
   /* text-align: center; */
   width: 100vw;
 }
 
 
+.fish1{
+  padding: 2vw;
+  /* align-items: center;
+  vertical-align: middle;
+  text-align: center; */
+}
 
-.fish div{
+.fish2{
+  padding: 2vw;
+  /* align-items: center;
+  vertical-align: middle;
+  text-align: center; */
+}
+
+.fish3{
   padding: 2vw;
   /* align-items: center;
   vertical-align: middle;

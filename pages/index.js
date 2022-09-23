@@ -475,17 +475,17 @@ export default function Home() {
 
                                             <a href="./witness-seminar-in-seili"
                                                 className={
-                                                    styles.linkTop
+                                                    styles.linkTop1
                                             }>Witness Seminar in Seili
                                             </a>
 
 
                                             <a className={
-                                                    styles.linkTop
+                                                    styles.linkTop2
                                                 }
                                                 href="./a-witness-seminar-how-to">A Witness Seminar How-To</a>
                                             <a className={
-                                                    styles.linkTop
+                                                    styles.linkTop3
                                                 }
                                                 href="./about">About</a>
                                         </div>
@@ -505,41 +505,58 @@ export default function Home() {
                                             } </div> */}
 
                                         {/*---------------------------- live text ----------- */}
-
-                                        <div className={styles.fish}>
-                                        {/* className={styles.nppost} */}
+{/* -------fish 1 */}
+<div className={styles.fishContainer}>
+                                    <div className={styles.fishWrapper}>
                                         <div className={styles.nppost}>
-<div >
-<Image src="/assets/images/Fish.png" alt="Herring Fish 19XW" width="100px" height="25px"/>
+                                                <div className={styles.fish1}>
+                                                <Image src="/assets/images/Fish.png" alt="Herring Fish 19XW" width="100px" height="25px"/>
+                                                </div>
+                                        </div> 
+
+                                        <div className={ styles.nppostname }>Average Baltic herring size in 2000: 16cm</div> 
+                                        {/* <div className={ styles.nppostnamee }>This is placeholder text 2</div> 
+                                        <div className={ styles.nppostname }>This is placeholder text 3</div>  */}
+                                    </div>
+</div>
+{/* -------fish 2 */}
+<div className={styles.fishContainer2}>
+                                    <div className={styles.fishWrapper}>
+                                        <div className={styles.nppostt}>
+
+                                                <div className={styles.fish2}>
+                                                <Image src="/assets/images/Fish.png" alt="Herring Fish 19XX" width="150px" height="35px"/>
+                                                </div>
+                                        </div> 
+
+                                        {/* <div className={ styles.nppostname }>Average Baltic herring size in 2000: 16cm</div>  */}
+                                        <div className={ styles.nppostnamee }>Average Baltic herring size in 1990: 19cm</div> 
+                                        {/* <div className={ styles.nppostname }>This is placeholder text 3</div>  */}
+                                    </div>
+</div>
+{/* -------fish 3 */}
+<div className={styles.fishContainer3}>
+                                    <div className={styles.fishWrapper}>
+                                        <div className={styles.npposttt}>
+
+                                                <div className={styles.fish3}>
+                                                <Image src="/assets/images/Fish.png" alt="Herring Fish 19XX" width="200px" height="45px"/>
+                                                </div>
+                                        </div> 
+
+                                        {/* <div className={ styles.nppostname }>Average Baltic herring size in 2000: 16cm</div>  */}
+                                        {/* <div className={ styles.nppostnamee }>This is placeholder text 2</div>  */}
+                                        <div className={ styles.nppostnameee }>Average Baltic herring size in 1985: 21cm</div> 
+                                    </div>
 </div>
 
-<div >
-<Image src="/assets/images/Fish.png" alt="Herring Fish 19XX" width="150px" height="35px"/>
-</div>
 
-<div >
-<Image src="/assets/images/Fish.png" alt="Herring Fish 19XY" width="200px" height="45px"/>
-</div>
-</div> 
 
-<div className={ styles.nppostname }>Average Baltic herring size in 2000: 16cm</div> 
-{/* <div className={ styles.nppostnamee }>This is placeholder text 2</div> 
-<div className={ styles.nppostname }>This is placeholder text 3</div>  */}
 
-</div>
-
-                                        <div className={
-                                            styles.livetextWrapper
-                                        }>
-                                            <div className={
-                                                styles.livetextContainer
-                                            }>
-                                                <div className={
-                                                    styles.nppost
-                                                }>
-                                                    <div className={
-                                                        styles.livetext
-                                                    }>
+                                        <div className={ styles.livetextWrapper}>
+                                            <div className={styles.livetextContainer}>
+                                                <div className={ styles.nppost }>
+                                                    <div className={styles.livetext }>
                                                         <span className={valueState}>Fields of May</span>
                                                     </div>
                                                 </div>
