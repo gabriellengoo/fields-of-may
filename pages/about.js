@@ -147,7 +147,7 @@ export default function Home() {
   <div className={styles.mobilenavsub}>
 
   <div className={styles.dropdown}>
-        <label for="toggle-1">Scroll</label>
+        <label htmlFor="toggle-1">Scroll</label>
         <input type="checkbox" id="toggle-1" />
         <ul>
           <li><a href="#On-Rhythm">On Rhythm</a></li>
