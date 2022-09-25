@@ -125,6 +125,11 @@ export default function Home() {
                 <script src="assets/simulation.js" defer></script>
                 <script src="assets/ui.js" defer></script>
                 <script src="assets/waves.js" defer></script>
+                <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+    <script src="bundle.js" defer></script>
             </Head>
 
             {/* {
