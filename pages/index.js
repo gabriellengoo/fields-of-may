@@ -5,7 +5,6 @@ import * as React from 'react';
 import {useEffect} from 'react'
 import {useState} from "react";
 import {BrowserView, MobileView, isBrowser, isMobile} from "react-device-detect";
-import {browserName, CustomView} from "react-device-detect";
 import Hamburger from 'hamburger-react'
 
 
@@ -13,13 +12,6 @@ export default function Home() {
 
     const [isShown, setIsShown] = useState(false);
     const [isLoaded, setisLoaded] = useState(false);
-
-
-    useEffect(() => {
-        setTimeout(() => {
-            setisLoaded(true);
-        }, 2000);
-    }, []);
 
 
 
@@ -119,23 +111,21 @@ export default function Home() {
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js" defer></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" defer></link>
-                {/* <script src="./path/to/blotter.js" defer></script> */}
                 <script src="assets/app.js" defer></script>
                 <script src="assets/shared.js" defer></script>
                 <script src="assets/simulation.js" defer></script>
                 <script src="assets/ui.js" defer></script>
                 <script src="assets/waves.js" defer></script>
-                <noscript>
+                {/* <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
-    <script src="bundle.js" defer></script>
+    <script src="bundle.js" defer></script> */}
             </Head>
 
             {/* {
             isLoaded ? (
                 <> */}
-                    <noscript>You need to enable JavaScript to run this site.</noscript>
 
 
                     <MobileView>
@@ -568,25 +558,6 @@ export default function Home() {
                                
 
 
-                                                {/* <div className={
-                                                    styles.nppostname
-                                                }>Text legabilaty
-                                                                                                                            (through blur) 
-                                                                                                                            representing the Amount of
-                                                    <a href=" https://goo.gl/maps/sLnY9MYMYfbBCA5y8"
-                                                        className={
-                                                            styles.link
-                                                    }>
-                                                        Baltic Sea Algae in real time, Herring Fish size repusents amount of Salinity
-                                                    </a>
-
-
-                                                    <p>
-                                                        <b></b>
-                                                    </p>
-                                                </div> */}
-
-
                                             </div>
                                         </div>
 
@@ -596,14 +567,7 @@ export default function Home() {
                                             styles.subText
                                         }>
 
-                            
-                                            {/* {
-                                            isShown && (
-                                                <div>
-                                                    <h2>Some content here</h2>
-                                                </div>
-                                            )
-                                        } */}
+                        
 
 
                                             <p className={
@@ -750,77 +714,13 @@ export default function Home() {
                 <div className={styles.choppinesslabel} id="choppiness-label"></div>
             </div>
         </div>
-        <canvas className={styles.simulator} id="simulator"></canvas> */} </div>
+        <canvas className={styles.simulator} id="simulator"></canvas> */}
+        </div>
                         </BrowserView>
                     </div>
-                {/* </>
-            ) : (
-                <div className={
-                    styles.loader
-                }>
-                    <Image src="/assets/images/loader.gif"
-                        width={70}
-                        height={70}
-                        alt="Loader GIF - Loading fallback"/>
-                </div>
-            )
-        }  */}
         </div>
     )
 }
 
 
-// function Box() {
-//     return (
-        
-//         <BrowserView>
-//             <div>
-//             <Head>
-//                 <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js" defer></script>
-//                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js" defer></script>
-//                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js" defer></script>
-//                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" defer></script>
-//                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" defer></link>
-//                 <script src="assets/app.js" defer></script>
-//                 <script src="assets/shared.js" defer></script>
-//                 <script src="assets/simulation.js" defer></script>
-//                 <script src="assets/ui.js" defer></script>
-//                 <script src="assets/waves.js" defer></script>
-//             </Head>
 
-//                 <div className={styles.box}> 
-//                 <div className={styles.boxtext}> For several decades the Archipelago Research Institute has been measuring the shrinking Herring and traced the cause to the morphing plankton due to changes in salinity and eutrophication. </div>
-
-// <label htmlFor="year">See size changes </label>
-// <select className={styles.boxselect} id="myselection">
-// 	<option>Select Year</option>
-// 	<option value="One">19XW</option>
-// 	<option value="Two">19XX</option>
-// 	<option value="Three">19XY</option>
-// </select>
-// <div className={styles.myDivwrapper}>
-// <div id="showOne" className={styles.myDiv}>
-// 	<Image src="/assets/images/Fish.png" alt="Herring Fish 19XW" width="100px" height="25px"/>
-//     <span>19XW</span>
-// </div>
-// <div id="showTwo" className={styles.myDiv}>
-// <Image src="/assets/images/Fish.png" alt="Herring Fish 19XX" width="200px" height="50px"/>
-// <span>19XX</span>
-// </div>
-// <div id="showThree" className={styles.myDiv}>
-// <Image src="/assets/images/Fish.png" alt="Herring Fish 19XY" width="400px" height="100px"/>
-// <span>19XY</span>
-// </div>
-// </div>
-
-
-
-
-
-
-
-// </div>
-//             </div>
-//         </BrowserView>
-//     );
-// }
