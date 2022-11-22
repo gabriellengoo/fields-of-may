@@ -14,7 +14,8 @@ export default function Home() {
     const [isLoaded, setisLoaded] = useState(false);
 
 
-
+    
+    // --------------------------------------- feching data starts here
 
     const [isOpen, setOpen] = useState(false)
 
@@ -96,6 +97,7 @@ export default function Home() {
         })
     }, []);
 
+    // feching data ends here
 
     return (
         <div>
@@ -192,7 +194,7 @@ export default function Home() {
 
 
                                     {/*---------------------------- live text ----------- */}
-
+{/*---------------------------- data used here ----------- */}
 
                                     <div className={
                                         styles.livetextWrappermobile
