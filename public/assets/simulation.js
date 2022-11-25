@@ -370,6 +370,7 @@ var OCEAN_FRAGMENT_SOURCE = [
 ].join('\n');
 
 var Simulator = function (canvas, width, height) {
+    console.log(canvas, width, height);
     var canvas = canvas;
     canvas.width = width;
     canvas.height = height;

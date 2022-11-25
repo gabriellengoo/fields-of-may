@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/About.module.css'
 import * as React from 'react';
+import axios from 'axios';
 import {
     BrowserView,
     MobileView,
@@ -15,7 +16,8 @@ import {
  
 export default function Home() {
 
-    let url = 'https://value-parser.herokuapp.com/';
+    let url = 'http://localhost:5000/api/scrap';
+    axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
     const [isOpen, setOpen] = useState(false)
     // create state variable to store the value
@@ -25,11 +27,17 @@ export default function Home() {
 
     // fetch value from url and set the value to the state
     React.useEffect(() => {
-        fetch(url).then(res => res.text()).then(data => {
-            let arr = data.split(' ');
-            setDateState(arr[0]);
+        axios.get(url, {
+            headers: {
+              'Access-Control-Allow-Origin': '*',
+              'Content-Type': 'application/json',
+            },
+          }).then(res => { // fetch date
+            let data = res.data.data;
+            setDateState(data[0]);
 
-            let value = parseFloat(arr[2]);
+            // fetch value for blur
+            let value = parseFloat(data[1]);
             if (value > 0 && value <= 2) {
                 setValueState(styles.ExcellentVision);
                 setFaviconState('/Excellent.ico');

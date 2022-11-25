@@ -11,6 +11,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/material": "^5.10.1",
     "@mui/styled-engine-sc": "^5.10.1",
+    "axios": "^1.2.0",
     "bootstrap": "^5.2.0",
     "draggable_dialog": "^1.0.3",
     "hamburger-react": "^2.5.0",
@@ -24,12 +25,14 @@
     "react-router-dom": "^6.4.0",
     "styled-components": "^5.3.5"
   },
-  "scripts": { 
-    "dev": "next",  
+  "scripts": {
+    "client": "next",
+    "server": "cd value-parse-server && npm start",
+    "dev": "concurrently \"npm run client\" \"npm run server\"",
     "build": "next build",
-    "start": "next start", 
+    "start": "next start",
     "prod": "next export"
-},
+  },
   "devDependencies": {
     "eslint": "8.22.0",
     "eslint-config-next": "12.2.5"

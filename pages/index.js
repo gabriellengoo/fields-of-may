@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import * as React from 'react';
+import axios from 'axios';
 import {useEffect} from 'react'
 import {useState} from "react";
 import {BrowserView, MobileView, isBrowser, isMobile} from "react-device-detect";
@@ -19,7 +20,8 @@ export default function Home() {
 
     const [isOpen, setOpen] = useState(false)
 
-    let url = 'https://value-parser.herokuapp.com/';
+    let url = 'http://localhost:5000/api/scrap';
+    axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
     // create state variable to store the value
     const [valueState, setValueState] = React.useState(styles.goodVision);
@@ -39,18 +41,22 @@ export default function Home() {
 
     // fetch value from url and set the value to the state
     React.useEffect(() => {
-        fetch(url).then(res => res.text()).then(data => { // fetch date
-            let arr = data.split(' ');
-            setDateState(arr[0]);
+        axios.get(url, {
+            headers: {
+              'Access-Control-Allow-Origin': '*',
+              'Content-Type': 'application/json',
+            },
+          }).then(res => { // fetch date
+            let data = res.data.data;
+            setDateState(data[0]);
 
 
             // fetch XXµg/l value
-            let arrr = data.split(' ');
-            setValueStatee(arrr[2]);
+            setValueStatee(data[1]);
 
 
             // fetch value for blur
-            let value = parseFloat(arr[2]);
+            let value = parseFloat(data[1]);
 
             if (value > 0 && value <= 2) {
                 setValueState(styles.ExcellentVision);
@@ -574,7 +580,7 @@ export default function Home() {
 
                                             <p className={
                                                 styles.subTextOpacity
-                                            }>The concentration of Baltic Sea Algae as of {dateState} is {valueStatee}. For several decades the Archipelago Research Institute has been measuring the shrinking Herring and traced the cause to the 
+                                            }>The concentration of Baltic Sea Algae as of {dateState} is {valueStatee}µg/l. For several decades the Archipelago Research Institute has been measuring the shrinking Herring and traced the cause to the 
                                                                                                                 morphing plankton due to changes in salinity and eutrophication. In short, Algae concentration is an indicator of the Baltic Sea&apos;s health here reflected in the legibility of the font.
                                             </p>
 
@@ -698,26 +704,26 @@ export default function Home() {
 
                                 {/* ----------------------------  wave -----------  */}
                                 {/* <div className={styles.overlay} id="overlay"></div>
-        <div className={styles.ui} id="ui">
-        <div className={styles.camera} id="camera">
-            <canvas className={styles.profile} id="profile" width="350" height="105"></canvas>
-                <div className={styles.length} id="length"></div>
-                <div className={styles.end} id="end"></div>
-                <div className={styles.wind} id="wind">
-                    <span className={styles.windspeed} id="wind-speed"></span><span id="wind-unit"></span>
-                    <div className={styles.windlabel} id="wind-label"></div>
-                </div>
+                                <div className={styles.ui} id="ui">
+                                    <div className={styles.camera} id="camera">
+                                        <canvas className={styles.profile} id="profile" width="350" height="105"></canvas>
+                                        <div className={styles.length} id="length"></div>
+                                        <div className={styles.end} id="end"></div>
+                                        <div className={styles.wind} id="wind">
+                                            <span className={styles.windspeed} id="wind-speed"></span><span id="wind-unit"></span>
+                                            <div className={styles.windlabel} id="wind-label"></div>
+                                        </div>
 
-                <div className={styles.size} id="size">
-                    <span className={styles.sizevalue} id="size-value"></span><span id="size-unit"></span>
-                </div>
-                <div className={styles.sizelabe} id="size-label"></div>
-                <div className={styles.choppiness} id="choppiness"></div>
-                <div className={styles.choppinesslabel} id="choppiness-label"></div>
-            </div>
-        </div>
-        <canvas className={styles.simulator} id="simulator"></canvas> */}
-        </div>
+                                        <div className={styles.size} id="size">
+                                            <span className={styles.sizevalue} id="size-value"></span><span id="size-unit"></span>
+                                        </div>
+                                        <div className={styles.sizelabe} id="size-label"></div>
+                                        <div className={styles.choppiness} id="choppiness"></div>
+                                        <div className={styles.choppinesslabel} id="choppiness-label"></div>
+                                    </div>
+                                </div> */}
+                                <canvas className={styles.simulator} id="simulator"></canvas> 
+                            </div>
                         </BrowserView>
                     </div>
         </div>

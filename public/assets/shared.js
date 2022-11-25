@@ -440,6 +440,7 @@ var setTransform = function (element, value) {
 };
 
 var setText = function (element, value, decimalPlaces) {
+    console.log(element, value, decimalPlaces);
     element.textContent = value.toFixed(decimalPlaces);
 };
 

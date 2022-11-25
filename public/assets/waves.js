@@ -7,13 +7,17 @@ var main = function () {
         windSpeedSpan = document.getElementById(WIND_SPEED_SPAN_ID),
         choppinessDiv = document.getElementById(CHOPPINESS_DIV_ID),
         sizeSpan = document.getElementById('size-value');
-
-    setText(choppinessDiv, INITIAL_CHOPPINESS, CHOPPINESS_DECIMAL_PLACES);
-    setText(sizeSpan, INITIAL_SIZE, SIZE_DECIMAL_PLACES);
+    if (choppinessDiv) {
+        setText(choppinessDiv, INITIAL_CHOPPINESS, CHOPPINESS_DECIMAL_PLACES);
+    }
+    if (sizeSpan) {
+        setText(sizeSpan, INITIAL_SIZE, SIZE_DECIMAL_PLACES);
+    }
 
     var camera = new Camera(),
         projectionMatrix = makePerspectiveMatrix(new Float32Array(16), FOV, MIN_ASPECT, NEAR, FAR);
     
+    console.log(window);
     var simulator = new Simulator(simulatorCanvas, window.innerWidth, window.innerHeight);
 
     var profile = new Profile(document.getElementById(PROFILE_CANVAS_ID)),

@@ -106,48 +106,48 @@ $( document ).on( "mousemove", function( event ) {
   
   
   // Date
-  function updateDate() {
-    let today = new Date();
+  // function updateDate() {
+  //   let today = new Date();
   
-    // return number
-    let dayName = today.getDay(),
-      dayNum = today.getDate(),
-      month = today.getMonth();
-      // year = today.getFullYear();
+  //   // return number
+  //   let dayName = today.getDay(),
+  //     dayNum = today.getDate(),
+  //     month = today.getMonth();
+  //     // year = today.getFullYear();
   
-    const months = [
-      "Jan",
-      "Feb",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
-    const dayWeek = [
-      "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"
-    ];
-    // value -> ID of the html element
-    const IDCollection = ["day", "daynum", "month"];
-    const IDCollection2 = ["day2", "daynum2"];
-    // return value array with number as a index
-    const val = [dayWeek[dayName], dayNum, months[month], ];
-    for (let i = 0; i < IDCollection.length; i++) {
-      document.getElementById(IDCollection[i]).firstChild.nodeValue = val[i];
-    }
+  //   const months = [
+  //     "Jan",
+  //     "Feb",
+  //     "March",
+  //     "April",
+  //     "May",
+  //     "June",
+  //     "July",
+  //     "Aug",
+  //     "Sep",
+  //     "Oct",
+  //     "Nov",
+  //     "Dec",
+  //   ];
+  //   const dayWeek = [
+  //     "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"
+  //   ];
+  //   // value -> ID of the html element
+  //   const IDCollection = ["day", "daynum", "month"];
+  //   const IDCollection2 = ["day2", "daynum2"];
+  //   // return value array with number as a index
+  //   const val = [dayWeek[dayName], dayNum, months[month], ];
+  //   for (let i = 0; i < IDCollection.length; i++) {
+  //     document.getElementById(IDCollection[i]).firstChild.nodeValue = val[i];
+  //   }
   
-    const val2 = [dayWeek[dayName], dayNum, months[month], ];
-    for (let i = 0; i < IDCollection2.length; i++) {
-      document.getElementById(IDCollection2[i]).firstChild.nodeValue = val[i];
-    }
-  }
+  //   const val2 = [dayWeek[dayName], dayNum, months[month], ];
+  //   for (let i = 0; i < IDCollection2.length; i++) {
+  //     document.getElementById(IDCollection2[i]).firstChild.nodeValue = val[i];
+  //   }
+  // }
   
-  updateDate();
+  // updateDate();
   
 
 
